@@ -5,6 +5,13 @@
       {
         "name": "Week 1",
         "path": "BASM104 - Histology (1)/Week 1"
+      }, 
+      {
+    "name": "BASM102 - Physiology (1)",
+    "weeks": [
+      {
+        "name": "Week 1",
+        "path": "BASM102 - Physiology (1)/Week 1"
       }
     ]
   }
