@@ -2,18 +2,31 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NUV Summaries | ملخصات جامعة وادي النيل</title>
+<title>NUV Summaries | ملخصات كلية العلاج الطبيعي</title>
 
-<meta name="description" content="NUV Summaries - ملخصات مواد كلية العلاج الطبيعي بجامعة وادي النيل">
-<meta name="robots" content="index,follow">
+<meta name="description" content="NUV Summaries - منصة ملخصات كلية العلاج الطبيعي بجامعة وادي النيل، تصفح ملخصات المواد والأسابيع بسهولة.">
+<meta name="keywords" content="NUV Summaries, Nile Valley University, جامعة وادي النيل, علاج طبيعي, ملخصات علاج طبيعي, Anatomy, Physiology, Biochemistry, Histology">
+<meta name="author" content="NUV Summaries">
+<meta name="robots" content="index, follow">
 
-<link rel="icon" href="https://i.ibb.co/R42YfR8d/1789148364355.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NUV Summaries | ملخصات كلية العلاج الطبيعي">
+<meta property="og:description" content="تصفح ملخصات كلية العلاج الطبيعي بجامعة وادي النيل حسب المادة والأسبوع.">
+<meta property="og:image" content="https://i.ibb.co/R42YfR8d/1789148364355.png">
+<meta property="og:site_name" content="NUV Summaries">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NUV Summaries">
+<meta name="twitter:description" content="ملخصات كلية العلاج الطبيعي بجامعة وادي النيل">
+<meta name="twitter:image" content="https://i.ibb.co/R42YfR8d/1789148364355.png">
+
+<link rel="icon" type="image/png" href="https://i.ibb.co/R42YfR8d/1789148364355.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -22,15 +35,47 @@ padding:0;
 box-sizing:border-box;
 }
 
+:root{
+--black:#050505;
+--black2:#090909;
+--black3:#101010;
+--card:#111111;
+--card2:#151515;
+--gold:#d4af37;
+--gold2:#f1d477;
+--gold3:#a9851f;
+--white:#f7f5ef;
+--gray:#aaa69b;
+--border:rgba(212,175,55,.16);
+--border2:rgba(255,255,255,.07);
+--shadow:0 25px 80px rgba(0,0,0,.55);
+}
+
 html{
 scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
-color:#fff;
-font-family:Cairo,Manrope,sans-serif;
+background:
+radial-gradient(circle at 50% -15%,rgba(212,175,55,.13),transparent 34%),
+radial-gradient(circle at 0% 50%,rgba(212,175,55,.035),transparent 28%),
+var(--black);
+color:var(--white);
+font-family:"Cairo",sans-serif;
 min-height:100vh;
+overflow-x:hidden;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background-image:
+linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+background-size:45px 45px;
+mask-image:linear-gradient(to bottom,black,transparent 75%);
 }
 
 button,
@@ -39,440 +84,926 @@ font-family:inherit;
 }
 
 button{
-border:0;
-outline:0;
+cursor:pointer;
+}
+
+a{
+color:inherit;
+text-decoration:none;
 }
 
 .header{
+position:sticky;
+top:0;
+z-index:100;
 height:78px;
-border-bottom:1px solid rgba(212,175,55,.14);
-background:#070707;
+background:rgba(5,5,5,.82);
+border-bottom:1px solid rgba(212,175,55,.12);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
 }
 
-.header-inner{
+.nav{
 height:100%;
-max-width:1180px;
+max-width:1280px;
 margin:auto;
-padding:0 20px;
+padding:0 22px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
 
-.logo{
+.brand{
 display:flex;
 align-items:center;
-gap:12px;
+gap:13px;
 }
 
-.logo img{
-width:43px;
-height:43px;
-object-fit:contain;
+.brand-logo{
+width:46px;
+height:46px;
+border-radius:13px;
+object-fit:cover;
+border:1px solid rgba(212,175,55,.28);
+box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
 
-.logo-title{
-font-family:Manrope,sans-serif;
+.brand-info{
+display:flex;
+flex-direction:column;
+line-height:1.25;
+}
+
+.brand-name{
+font-family:"Manrope",sans-serif;
+font-size:18px;
 font-weight:800;
-font-size:20px;
-letter-spacing:-.4px;
+letter-spacing:.2px;
 }
 
-.logo-title span{
-color:#d4af37;
+.brand-sub{
+font-size:10px;
+font-weight:500;
+color:var(--gray);
+margin-top:3px;
+}
+
+.nav-line{
+width:70px;
+height:1px;
+background:linear-gradient(90deg,transparent,var(--gold));
 }
 
 .hero{
-max-width:1180px;
+max-width:1100px;
 margin:auto;
-padding:70px 20px 35px;
+padding:86px 22px 52px;
 text-align:center;
 }
 
-.hero h1{
-font-family:Manrope,Cairo,sans-serif;
-font-size:clamp(36px,6vw,64px);
+.hero-logo{
+width:105px;
+height:105px;
+object-fit:cover;
+border-radius:29px;
+border:1px solid rgba(212,175,55,.3);
+box-shadow:
+0 25px 70px rgba(0,0,0,.55),
+0 0 55px rgba(212,175,55,.08);
+margin-bottom:28px;
+}
+
+.hero-kicker{
+font-family:"Manrope",sans-serif;
+font-size:11px;
 font-weight:800;
-letter-spacing:-2px;
+letter-spacing:4px;
+color:var(--gold);
+text-transform:uppercase;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-family:"Manrope","Cairo",sans-serif;
+font-size:clamp(38px,7vw,72px);
+font-weight:900;
+line-height:1;
+letter-spacing:-2.8px;
 }
 
 .hero h1 span{
-color:#d4af37;
+background:linear-gradient(120deg,var(--gold3),var(--gold2),var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.hero p{
-margin-top:13px;
-color:#999;
+.hero-description{
+max-width:680px;
+margin:23px auto 0;
 font-size:15px;
+line-height:2;
+color:var(--gray);
 }
 
-.search{
+.search-wrap{
 max-width:650px;
-margin:32px auto 0;
+margin:34px auto 0;
 position:relative;
 }
 
-.search input{
-width:100%;
-height:56px;
-background:#0d0d0d;
-border:1px solid rgba(212,175,55,.18);
-border-radius:15px;
-color:#fff;
-padding:0 20px;
-font-size:14px;
-outline:none;
-transition:.25s;
+.search-icon{
+position:absolute;
+right:19px;
+top:50%;
+transform:translateY(-50%);
+width:19px;
+height:19px;
+fill:none;
+stroke:var(--gold);
+stroke-width:1.7;
+pointer-events:none;
 }
 
-.search input:focus{
-border-color:#d4af37;
-box-shadow:0 0 0 3px rgba(212,175,55,.07);
+.search{
+width:100%;
+height:58px;
+padding:0 54px 0 20px;
+border-radius:17px;
+border:1px solid var(--border);
+background:rgba(255,255,255,.035);
+color:white;
+outline:none;
+font-size:13px;
+transition:.3s;
+}
+
+.search::placeholder{
+color:#77746d;
+}
+
+.search:focus{
+border-color:rgba(212,175,55,.5);
+background:rgba(212,175,55,.025);
+box-shadow:0 0 0 4px rgba(212,175,55,.055);
 }
 
 .container{
-max-width:1180px;
+max-width:1280px;
 margin:auto;
-padding:10px 20px 50px;
+padding:10px 22px 80px;
 }
 
-.topbar{
+.page{
+display:none;
+animation:pageIn .45s ease;
+}
+
+.page.active{
+display:block;
+}
+
+@keyframes pageIn{
+from{
+opacity:0;
+transform:translateY(12px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.section-heading{
 display:flex;
-align-items:center;
+align-items:end;
 justify-content:space-between;
-gap:15px;
-margin:20px 0;
+gap:20px;
+margin:10px 0 24px;
 }
 
-.title-area h2{
-font-size:23px;
+.heading-left{
+display:flex;
+flex-direction:column;
+gap:4px;
+}
+
+.eyebrow{
+font-size:10px;
+font-weight:800;
+letter-spacing:2px;
+color:var(--gold);
+text-transform:uppercase;
+font-family:"Manrope",sans-serif;
+}
+
+.section-heading h2{
+font-size:25px;
 font-weight:800;
 }
 
-.title-area p{
-font-size:13px;
-color:#777;
-margin-top:4px;
+.counter{
+font-size:12px;
+color:var(--gray);
 }
 
-.back-btn{
-display:none;
-align-items:center;
-gap:8px;
-height:42px;
-padding:0 16px;
-border-radius:12px;
-background:#101010;
-border:1px solid rgba(212,175,55,.22);
-color:#d4af37;
-cursor:pointer;
-transition:.2s;
-}
-
-.back-btn:hover{
-border-color:#d4af37;
-background:#141414;
-}
-
-.grid{
+.subjects{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
 gap:17px;
 }
 
 .subject-card{
 position:relative;
 overflow:hidden;
-padding:24px;
-min-height:165px;
-background:linear-gradient(145deg,#111,#080808);
-border:1px solid rgba(212,175,55,.13);
-border-radius:18px;
+min-height:185px;
+padding:25px;
+border:1px solid var(--border2);
+border-radius:22px;
+background:
+linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008)),
+var(--card);
 cursor:pointer;
-transition:.25s;
+transition:.35s cubic-bezier(.2,.8,.2,1);
 }
 
 .subject-card:before{
 content:"";
 position:absolute;
-width:100px;
-height:100px;
-background:rgba(212,175,55,.05);
-filter:blur(35px);
-top:-40px;
-right:-30px;
+width:170px;
+height:170px;
+border-radius:50%;
+background:var(--gold);
+opacity:.045;
+left:-70px;
+bottom:-90px;
+filter:blur(8px);
+transition:.4s;
 }
 
 .subject-card:hover{
-transform:translateY(-4px);
-border-color:rgba(212,175,55,.5);
+transform:translateY(-7px);
+border-color:rgba(212,175,55,.34);
+box-shadow:var(--shadow);
 }
 
-.icon-box{
-width:48px;
-height:48px;
-border-radius:13px;
+.subject-card:hover:before{
+opacity:.1;
+transform:scale(1.3);
+}
+
+.subject-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:22px;
+}
+
+.subject-number{
+width:35px;
+height:35px;
 display:flex;
 align-items:center;
 justify-content:center;
-background:rgba(212,175,55,.07);
-border:1px solid rgba(212,175,55,.16);
-margin-bottom:17px;
+border-radius:10px;
+border:1px solid rgba(212,175,55,.2);
+color:var(--gold2);
+font-family:"Manrope",sans-serif;
+font-size:11px;
+font-weight:800;
 }
 
-.icon-box svg{
-width:24px;
-height:24px;
-stroke:#d4af37;
+.subject-code{
+font-family:"Manrope",sans-serif;
+font-size:11px;
+font-weight:800;
+letter-spacing:.6px;
+color:var(--gold);
+direction:ltr;
+}
+
+.subject-name{
+font-size:17px;
+font-weight:800;
+line-height:1.7;
+max-width:235px;
+}
+
+.subject-footer{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-top:18px;
+color:#77746d;
+font-size:11px;
+}
+
+.arrow{
+width:17px;
+height:17px;
 fill:none;
+stroke:var(--gold);
+stroke-width:1.6;
+transition:.25s;
+}
+
+.subject-card:hover .arrow{
+transform:translateX(-4px);
+}
+
+.back-button{
+display:inline-flex;
+align-items:center;
+gap:9px;
+height:42px;
+padding:0 16px;
+margin-bottom:24px;
+border-radius:12px;
+border:1px solid var(--border2);
+background:rgba(255,255,255,.035);
+color:#ddd9cf;
+font-size:12px;
+transition:.25s;
+}
+
+.back-button:hover{
+border-color:rgba(212,175,55,.35);
+color:var(--gold2);
+}
+
+.back-icon{
+width:16px;
+height:16px;
+fill:none;
+stroke:currentColor;
 stroke-width:1.7;
 }
 
-.subject-card h3{
-font-size:16px;
-line-height:1.6;
-position:relative;
+.subject-header{
+padding:28px 30px;
+border:1px solid var(--border);
+border-radius:23px;
+background:
+linear-gradient(145deg,rgba(212,175,55,.055),transparent 50%),
+var(--card);
+margin-bottom:20px;
 }
 
-.subject-card .count{
-color:#777;
-font-size:12px;
-margin-top:6px;
-position:relative;
+.subject-header-code{
+font-family:"Manrope",sans-serif;
+font-size:11px;
+font-weight:800;
+letter-spacing:1px;
+color:var(--gold);
+direction:ltr;
 }
 
-.weeks-grid{
+.subject-header h2{
+font-size:29px;
+font-weight:800;
+margin-top:7px;
+}
+
+.weeks{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
 gap:15px;
 }
 
 .week-card{
-padding:23px;
-background:#0c0c0c;
-border:1px solid rgba(212,175,55,.13);
-border-radius:16px;
+position:relative;
+overflow:hidden;
+padding:22px;
+border-radius:18px;
+border:1px solid var(--border2);
+background:var(--card);
 cursor:pointer;
-transition:.25s;
+transition:.3s;
 }
 
 .week-card:hover{
-transform:translateY(-3px);
-border-color:rgba(212,175,55,.5);
+transform:translateY(-4px);
+border-color:rgba(212,175,55,.35);
+box-shadow:0 15px 45px rgba(0,0,0,.3);
 }
 
-.week-number{
-font-family:Manrope,sans-serif;
-font-size:12px;
-color:#d4af37;
-margin-bottom:10px;
+.week-card:after{
+content:"";
+position:absolute;
+height:2px;
+left:22px;
+right:22px;
+bottom:0;
+background:linear-gradient(90deg,transparent,var(--gold),transparent);
+opacity:.45;
 }
 
-.week-card h3{
-font-size:17px;
+.week-label{
+font-family:"Manrope",sans-serif;
+font-size:10px;
+letter-spacing:2px;
+font-weight:800;
+color:var(--gold);
+text-transform:uppercase;
 }
 
-.week-card p{
-font-size:12px;
-color:#777;
+.week-title{
+font-size:20px;
+font-weight:800;
+margin-top:7px;
+}
+
+.week-open{
+display:flex;
+align-items:center;
+gap:7px;
+color:#77746d;
+font-size:11px;
+margin-top:14px;
+}
+
+.week-open svg{
+width:14px;
+height:14px;
+fill:none;
+stroke:var(--gold);
+stroke-width:1.7;
+}
+
+.summary-card{
+border-radius:24px;
+border:1px solid var(--border);
+background:var(--card);
+overflow:hidden;
+box-shadow:0 20px 70px rgba(0,0,0,.25);
+}
+
+.summary-info{
+padding:27px 30px;
+border-bottom:1px solid var(--border2);
+background:
+linear-gradient(120deg,rgba(212,175,55,.045),transparent 55%);
+}
+
+.summary-main{
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+gap:25px;
+}
+
+.summary-label{
+font-size:10px;
+font-family:"Manrope",sans-serif;
+letter-spacing:2px;
+font-weight:800;
+color:var(--gold);
+text-transform:uppercase;
+}
+
+.summary-title{
+font-size:26px;
+font-weight:800;
 margin-top:6px;
-}
-
-.summary-head{
-background:linear-gradient(145deg,#111,#080808);
-border:1px solid rgba(212,175,55,.15);
-border-radius:18px;
-padding:23px;
-margin-bottom:18px;
-}
-
-.summary-head h2{
-font-size:21px;
-margin-bottom:16px;
 }
 
 .summary-meta{
 display:flex;
-align-items:center;
 flex-wrap:wrap;
-gap:18px;
-color:#999;
-font-size:13px;
+gap:9px;
+margin-top:15px;
 }
 
-.doctor{
-color:#fff;
+.meta{
+display:flex;
+align-items:center;
+gap:7px;
+height:34px;
+padding:0 11px;
+border:1px solid var(--border2);
+border-radius:9px;
+background:rgba(255,255,255,.025);
+color:#8c8981;
+font-size:11px;
 }
 
-.doctor strong{
-color:#d4af37;
-font-weight:700;
+.meta svg{
+width:14px;
+height:14px;
+fill:none;
+stroke:var(--gold);
+stroke-width:1.6;
 }
 
-.date{
-color:#999;
+.meta strong{
+color:#ddd9cf;
+font-weight:600;
+}
+
+.rating{
+display:flex;
+flex-direction:column;
+align-items:flex-end;
+gap:6px;
+}
+
+.rating-label{
+font-size:9px;
+color:#77746d;
+letter-spacing:1px;
+font-family:"Manrope",sans-serif;
+text-transform:uppercase;
 }
 
 .stars{
 display:flex;
-align-items:center;
-gap:3px;
+gap:4px;
 direction:ltr;
 }
 
-.star{
-width:19px;
-height:19px;
+.star-svg{
+width:21px;
+height:21px;
 }
 
-.star svg{
-width:100%;
-height:100%;
-fill:#262626;
-stroke:#d4af37;
-stroke-width:1.2;
+.star-svg path{
+fill:#2c2923;
+stroke:#514a38;
+stroke-width:1;
 }
 
-.star.active svg{
-fill:#d4af37;
+.star-svg.active path{
+fill:var(--gold);
+stroke:var(--gold2);
 }
 
 .gallery{
+padding:20px;
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
+grid-template-columns:repeat(auto-fill,minmax(205px,1fr));
+gap:13px;
 }
 
 .image-card{
-background:#0b0b0b;
-border:1px solid rgba(212,175,55,.12);
-border-radius:15px;
+position:relative;
 overflow:hidden;
-cursor:pointer;
+aspect-ratio:3/4;
+border-radius:15px;
+background:#070707;
+border:1px solid rgba(255,255,255,.07);
 }
 
 .image-card img{
-display:block;
 width:100%;
-aspect-ratio:3/4;
+height:100%;
+display:block;
 object-fit:cover;
-transition:.3s;
+cursor:pointer;
+transition:.4s;
 }
 
 .image-card:hover img{
-transform:scale(1.025);
+transform:scale(1.035);
 }
 
-.loading,
-.empty,
-.error{
-padding:65px 20px;
+.image-overlay{
+position:absolute;
+inset:auto 9px 9px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+background:rgba(0,0,0,.78);
+backdrop-filter:blur(12px);
+border:1px solid rgba(212,175,55,.16);
+color:#ddd9cf;
+font-size:10px;
+opacity:0;
+transition:.25s;
+pointer-events:none;
+}
+
+.image-card:hover .image-overlay{
+opacity:1;
+}
+
+.loading{
+padding:75px 20px;
 text-align:center;
-color:#777;
+color:#77746d;
+font-size:12px;
 }
 
-.error{
-color:#d4af37;
+.loader{
+width:35px;
+height:35px;
+margin:0 auto 15px;
+border:2px solid rgba(212,175,55,.15);
+border-top-color:var(--gold);
+border-radius:50%;
+animation:spin .75s linear infinite;
 }
 
-.hidden{
-display:none!important;
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+
+.error-box{
+padding:45px 20px;
+border-radius:18px;
+border:1px solid rgba(212,175,55,.12);
+background:rgba(212,175,55,.025);
+text-align:center;
+color:#a39e91;
+font-size:12px;
+}
+
+.error-box strong{
+display:block;
+color:var(--gold2);
+font-size:16px;
+margin-bottom:8px;
+}
+
+.empty{
+grid-column:1/-1;
 }
 
 .lightbox{
 position:fixed;
 inset:0;
-z-index:1000;
+z-index:9999;
 display:none;
 align-items:center;
 justify-content:center;
+padding:30px;
 background:rgba(0,0,0,.96);
-padding:20px;
+backdrop-filter:blur(15px);
 }
 
 .lightbox.active{
 display:flex;
 }
 
-.lightbox img{
-max-width:92vw;
-max-height:88vh;
+.lightbox-image{
+max-width:90vw;
+max-height:87vh;
 object-fit:contain;
+border-radius:10px;
+box-shadow:0 30px 100px rgba(0,0,0,.7);
+user-select:none;
 }
 
-.lb-button{
-position:absolute;
+.lightbox-button{
+position:fixed;
 width:46px;
 height:46px;
-border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#111;
-border:1px solid rgba(212,175,55,.3);
-color:#d4af37;
-font-size:25px;
-cursor:pointer;
+border-radius:13px;
+border:1px solid rgba(212,175,55,.18);
+background:rgba(20,20,20,.85);
+color:#ddd9cf;
+transition:.2s;
 }
 
-.lb-close{
+.lightbox-button:hover{
+border-color:rgba(212,175,55,.5);
+color:var(--gold2);
+}
+
+.lightbox-button svg{
+width:20px;
+height:20px;
+fill:none;
+stroke:currentColor;
+stroke-width:1.6;
+}
+
+.lightbox-close{
 top:20px;
 right:20px;
 }
 
-.lb-next{
+.lightbox-prev{
 left:20px;
 top:50%;
 transform:translateY(-50%);
 }
 
-.lb-prev{
+.lightbox-next{
 right:20px;
 top:50%;
 transform:translateY(-50%);
 }
 
-footer{
-border-top:1px solid rgba(212,175,55,.1);
+.lightbox-download{
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+width:auto;
+padding:0 18px;
+gap:8px;
+font-family:"Cairo",sans-serif;
+font-size:11px;
+}
+
+.lightbox-counter{
+position:fixed;
+top:27px;
+left:50%;
+transform:translateX(-50%);
+font-family:"Manrope",sans-serif;
+font-size:11px;
+color:#77746d;
+direction:ltr;
+}
+
+.footer{
+max-width:1280px;
+margin:auto;
+padding:32px 22px 40px;
+border-top:1px solid rgba(255,255,255,.055);
 text-align:center;
-padding:28px 20px;
-color:#666;
-font-size:12px;
+color:#5f5c55;
+font-size:10px;
+line-height:2;
 }
 
-footer span{
-color:#d4af37;
+.footer strong{
+font-family:"Manrope",sans-serif;
+color:#a39d8d;
+letter-spacing:.5px;
 }
 
-@media(max-width:950px){
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
+@media(max-width:700px){
 
-.weeks-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.gallery{
-grid-template-columns:repeat(3,1fr);
-}
-}
-
-@media(max-width:600px){
 .header{
-height:70px;
+height:68px;
+}
+
+.nav{
+padding:0 15px;
+}
+
+.brand-logo{
+width:40px;
+height:40px;
+border-radius:11px;
+}
+
+.brand-name{
+font-size:16px;
+}
+
+.nav-line{
+display:none;
 }
 
 .hero{
-padding-top:45px;
+padding:55px 16px 38px;
+}
+
+.hero-logo{
+width:82px;
+height:82px;
+border-radius:23px;
+margin-bottom:22px;
+}
+
+.hero-kicker{
+font-size:9px;
+letter-spacing:3px;
 }
 
 .hero h1{
-letter-spacing:-1px;
+font-size:40px;
+letter-spacing:-1.8px;
 }
 
-.grid,
-.weeks-grid{
+.hero-description{
+font-size:13px;
+line-height:2;
+}
+
+.container{
+padding:5px 15px 60px;
+}
+
+.section-heading{
+align-items:flex-start;
+flex-direction:column;
+gap:5px;
+}
+
+.section-heading h2{
+font-size:22px;
+}
+
+.subjects{
+grid-template-columns:1fr;
+gap:12px;
+}
+
+.subject-card{
+min-height:155px;
+padding:21px;
+border-radius:18px;
+}
+
+.weeks{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.week-card{
+padding:17px;
+border-radius:15px;
+}
+
+.week-title{
+font-size:17px;
+}
+
+.subject-header{
+padding:22px;
+border-radius:18px;
+}
+
+.subject-header h2{
+font-size:23px;
+}
+
+.summary-info{
+padding:21px;
+}
+
+.summary-main{
+flex-direction:column;
+gap:16px;
+}
+
+.rating{
+align-items:flex-start;
+}
+
+.summary-title{
+font-size:22px;
+}
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+padding:9px;
+gap:8px;
+}
+
+.image-overlay{
+opacity:1;
+height:34px;
+font-size:9px;
+}
+
+.lightbox{
+padding:8px;
+}
+
+.lightbox-image{
+max-width:96vw;
+max-height:82vh;
+}
+
+.lightbox-button{
+width:40px;
+height:40px;
+border-radius:11px;
+}
+
+.lightbox-prev{
+left:8px;
+}
+
+.lightbox-next{
+right:8px;
+}
+
+.lightbox-close{
+top:10px;
+right:10px;
+}
+
+.lightbox-download{
+bottom:12px;
+}
+
+}
+
+@media(max-width:390px){
+
+.weeks{
 grid-template-columns:1fr;
 }
 
@@ -480,13 +1011,10 @@ grid-template-columns:1fr;
 grid-template-columns:repeat(2,1fr);
 }
 
-.topbar{
-align-items:flex-start;
+.hero h1{
+font-size:35px;
 }
 
-.summary-meta{
-gap:11px;
-}
 }
 </style>
 </head>
@@ -494,125 +1022,202 @@ gap:11px;
 <body>
 
 <header class="header">
-<div class="header-inner">
-<div class="logo">
-<img src="https://i.ibb.co/R42YfR8d/1789148364355.png" alt="NUV">
-<div class="logo-title">NUV <span>Summaries</span></div>
+<div class="nav">
+
+<a href="#" class="brand" onclick="goHome();return false;">
+
+<img class="brand-logo" src="https://i.ibb.co/R42YfR8d/1789148364355.png">
+
+<div class="brand-info">
+<div class="brand-name">NUV Summaries</div>
+<div class="brand-sub">Nile Valley University</div>
 </div>
+
+</a>
+
+<div class="nav-line"></div>
+
 </div>
 </header>
 
-<section class="hero">
-<h1>NUV <span>Summaries</span></h1>
-<p>ملخصات ومراجعات مواد كلية العلاج الطبيعي</p>
+<section class="hero" id="hero">
 
-<div class="search">
-<input id="searchInput" type="search" placeholder="ابحث عن المادة...">
+<img class="hero-logo" src="https://i.ibb.co/R42YfR8d/1789148364355.png">
+
+<div class="hero-kicker">Faculty Of Physical Therapy</div>
+
+<h1>
+NUV <span>Summaries</span>
+</h1>
+
+<p class="hero-description">
+منصة ملخصات كلية العلاج الطبيعي بجامعة وادي النيل.
+تصفح المواد والأسابيع والوصول إلى الملخصات بسهولة من مكان واحد.
+</p>
+
+<div class="search-wrap">
+
+<svg class="search-icon" viewBox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<path d="M20 20l-4-4"></path>
+</svg>
+
+<input
+class="search"
+id="searchInput"
+type="search"
+placeholder="ابحث عن المادة..."
+autocomplete="off">
+
 </div>
+
 </section>
 
 <main class="container">
 
-<div class="topbar">
+<section id="homePage" class="page active">
 
-<div class="title-area">
-<h2 id="pageTitle">المواد الدراسية</h2>
-<p id="pageSubtitle">اختر المادة لعرض الأسابيع والملخصات</p>
+<div class="section-heading">
+
+<div class="heading-left">
+<div class="eyebrow">Academic Library</div>
+<h2>المواد الدراسية</h2>
 </div>
 
-<button id="backButton" class="back-btn">
-<span>←</span>
-<span>عودة</span>
+<div class="counter" id="subjectCounter">
+جاري التحميل
+</div>
+
+</div>
+
+<div id="subjects" class="subjects">
+
+<div class="loading">
+<div class="loader"></div>
+جاري تحميل المواد
+</div>
+
+</div>
+
+</section>
+
+<section id="subjectPage" class="page">
+
+<button class="back-button" onclick="goHome()">
+
+<svg class="back-icon" viewBox="0 0 24 24">
+<path d="M19 12H5"></path>
+<path d="M12 19l-7-7 7-7"></path>
+</svg>
+
+العودة إلى المواد
+
 </button>
 
+<div class="subject-header">
+
+<div class="subject-header-code" id="pageCode"></div>
+
+<h2 id="pageSubjectName"></h2>
+
 </div>
 
-<section id="subjectsSection">
-
-<div id="subjectsGrid" class="grid"></div>
-
-<div id="subjectsLoading" class="loading">
-جاري تحميل المواد...
-</div>
-
-<div id="subjectsEmpty" class="empty hidden">
-لا توجد مواد متاحة.
-</div>
+<div id="weeks" class="weeks"></div>
 
 </section>
 
-<section id="weeksSection" class="hidden">
+<section id="summaryPage" class="page">
 
-<div id="weeksGrid" class="weeks-grid"></div>
+<button class="back-button" onclick="goSubject()">
 
-<div id="weeksEmpty" class="empty hidden">
-لا توجد أسابيع متاحة لهذه المادة.
-</div>
+<svg class="back-icon" viewBox="0 0 24 24">
+<path d="M19 12H5"></path>
+<path d="M12 19l-7-7 7-7"></path>
+</svg>
 
-</section>
+العودة إلى الأسابيع
 
-<section id="summarySection" class="hidden">
+</button>
 
-<div id="summaryHead" class="summary-head"></div>
-
-<div id="gallery" class="gallery"></div>
-
-<div id="galleryEmpty" class="empty hidden">
-لا توجد صور للملخص.
-</div>
+<div id="summaryContainer"></div>
 
 </section>
 
 </main>
 
-<footer>
-Made by <span>Dr. Omar Mustafa</span>
+<footer class="footer">
+<strong>NUV SUMMARIES</strong>
+<br>
+Nile Valley University — Faculty of Physical Therapy
+<br>
+© 2026 NUV Summaries
 </footer>
 
-<div id="lightbox" class="lightbox">
+<div class="lightbox" id="lightbox">
 
-<button id="lbClose" class="lb-button lb-close">×</button>
-<button id="lbPrev" class="lb-button lb-prev">›</button>
-<button id="lbNext" class="lb-button lb-next">‹</button>
+<div class="lightbox-counter" id="lightboxCounter"></div>
 
-<img id="lbImage" src="" alt="Summary">
+<button class="lightbox-button lightbox-close" onclick="closeLightbox()">
+
+<svg viewBox="0 0 24 24">
+<path d="M6 6l12 12"></path>
+<path d="M18 6L6 18"></path>
+</svg>
+
+</button>
+
+<button class="lightbox-button lightbox-prev" onclick="previousImage()">
+
+<svg viewBox="0 0 24 24">
+<path d="M15 5l-7 7 7 7"></path>
+</svg>
+
+</button>
+
+<img class="lightbox-image" id="lightboxImage">
+
+<button class="lightbox-button lightbox-next" onclick="nextImage()">
+
+<svg viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7"></path>
+</svg>
+
+</button>
+
+<button class="lightbox-button lightbox-download" onclick="downloadCurrentImage()">
+
+<svg viewBox="0 0 24 24">
+<path d="M12 3v12"></path>
+<path d="M7 10l5 5 5-5"></path>
+<path d="M5 21h14"></path>
+</svg>
+
+تحميل الصورة
+
+</button>
 
 </div>
 
 <script>
+
 "use strict";
 
-const state={
-subjects:[],
-currentSubject:null,
-currentWeek:null,
-images:[],
-imageIndex:0,
-level:"subjects"
-};
-
-const $=id=>document.getElementById(id);
-
-const subjectsGrid=$("subjectsGrid");
-const weeksGrid=$("weeksGrid");
-const gallery=$("gallery");
-const subjectsSection=$("subjectsSection");
-const weeksSection=$("weeksSection");
-const summarySection=$("summarySection");
-const backButton=$("backButton");
-const pageTitle=$("pageTitle");
-const pageSubtitle=$("pageSubtitle");
-const searchInput=$("searchInput");
-const lightbox=$("lightbox");
-const lbImage=$("lbImage");
-
-document.addEventListener("DOMContentLoaded",init);
+let subjects=[];
+let currentSubject=null;
+let currentWeek=null;
+let currentImages=[];
+let currentImageIndex=0;
 
 async function init(){
 
 try{
 
-const response=await fetch("summaries/subjects.json",{cache:"no-cache"});
+const response=await fetch(
+"summaries/subjects.json",
+{
+cache:"no-cache"
+}
+);
 
 if(!response.ok){
 throw new Error("subjects.json not found");
@@ -624,239 +1229,220 @@ if(!Array.isArray(data)){
 throw new Error("Invalid subjects.json");
 }
 
-state.subjects=data;
+subjects=data;
 
-$("subjectsLoading").classList.add("hidden");
+subjects.sort((a,b)=>
+String(a.name||"").localeCompare(
+String(b.name||""),
+undefined,
+{numeric:true}
+)
+);
 
-renderSubjects();
+renderSubjects(subjects);
 
 }catch(error){
 
 console.error(error);
 
-$("subjectsLoading").classList.add("hidden");
-$("subjectsEmpty").classList.remove("hidden");
-$("subjectsEmpty").textContent="تعذر تحميل المواد. تأكد من وجود summaries/subjects.json";
+document.getElementById("subjects").innerHTML=`
+<div class="error-box empty">
+<strong>تعذر تحميل المواد</strong>
+تأكد من وجود الملف summaries/subjects.json
+</div>
+`;
+
+document.getElementById("subjectCounter").textContent=
+"0 مادة";
 
 }
 
-setupEvents();
-
 }
 
-function setupEvents(){
+function getCode(name){
 
-searchInput.addEventListener("input",()=>{
-
-if(state.level==="subjects"){
-renderSubjects();
-}
-
-});
-
-backButton.addEventListener("click",goBack);
-
-$("lbClose").addEventListener("click",closeLightbox);
-$("lbNext").addEventListener("click",nextImage);
-$("lbPrev").addEventListener("click",prevImage);
-
-document.addEventListener("keydown",event=>{
-
-if(event.key==="Escape"){
-closeLightbox();
-}
-
-if(event.key==="ArrowLeft"){
-nextImage();
-}
-
-if(event.key==="ArrowRight"){
-prevImage();
-}
-
-});
-
-}
-
-function renderSubjects(){
-
-const query=searchInput.value.trim().toLowerCase();
-
-const list=state.subjects.filter(item=>
-String(item.name||"").toLowerCase().includes(query)
+const match=String(name||"").match(
+/^([A-Z0-9]+)\s*-/
 );
 
-subjectsGrid.innerHTML="";
+return match?match[1]:"";
+
+}
+
+function getName(name){
+
+return String(name||"").replace(
+/^[A-Z0-9]+\s*-\s*/,
+""
+);
+
+}
+
+function renderSubjects(list){
+
+const container=
+document.getElementById("subjects");
+
+document.getElementById(
+"subjectCounter"
+).textContent=
+`${list.length} مادة`;
 
 if(!list.length){
 
-$("subjectsEmpty").classList.remove("hidden");
-return;
-
-}
-
-$("subjectsEmpty").classList.add("hidden");
-
-list.forEach(subject=>{
-
-const card=document.createElement("article");
-
-card.className="subject-card";
-
-const weeks=Array.isArray(subject.weeks)?subject.weeks.length:0;
-
-card.innerHTML=`
-<div class="icon-box">
-<svg viewBox="0 0 24 24">
-<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/>
-<path d="M4 5.5v16"/>
-</svg>
+container.innerHTML=`
+<div class="error-box empty">
+<strong>لا توجد نتائج</strong>
+لم يتم العثور على مادة مطابقة للبحث.
 </div>
-<h3>${escapeHtml(subject.name)}</h3>
-<div class="count">${weeks} ${weeks===1?"أسبوع":"أسابيع"}</div>
 `;
 
-card.addEventListener("click",()=>openSubject(subject));
-
-subjectsGrid.appendChild(card);
-
-});
-
-}
-
-function openSubject(subject){
-
-state.currentSubject=subject;
-state.currentWeek=null;
-state.level="weeks";
-
-subjectsSection.classList.add("hidden");
-summarySection.classList.add("hidden");
-weeksSection.classList.remove("hidden");
-
-backButton.style.display="flex";
-
-pageTitle.textContent=subject.name;
-pageSubtitle.textContent="اختر الأسبوع لعرض الملخصات";
-
-searchInput.value="";
-
-weeksGrid.innerHTML="";
-
-const weeks=Array.isArray(subject.weeks)?subject.weeks:[];
-
-if(!weeks.length){
-
-$("weeksEmpty").classList.remove("hidden");
 return;
 
 }
 
-$("weeksEmpty").classList.add("hidden");
+container.innerHTML=list.map(
+(subject,index)=>`
 
-weeks.forEach((week,index)=>{
+<article
+class="subject-card"
+onclick="openSubject(${subjects.indexOf(subject)})">
 
-const card=document.createElement("article");
+<div class="subject-top">
 
-card.className="week-card";
+<div class="subject-number">
+${String(index+1).padStart(2,"0")}
+</div>
 
-card.innerHTML=`
-<div class="week-number">WEEK ${index+1}</div>
-<h3>${escapeHtml(week.name)}</h3>
-<p>عرض ملخصات هذا الأسبوع</p>
+<div class="subject-code">
+${escapeHTML(getCode(subject.name))}
+</div>
+
+</div>
+
+<div class="subject-name">
+${escapeHTML(getName(subject.name))}
+</div>
+
+<div class="subject-footer">
+
+<span>عرض الملخصات</span>
+
+<svg class="arrow" viewBox="0 0 24 24">
+<path d="M5 12h14"></path>
+<path d="M13 6l6 6-6 6"></path>
+</svg>
+
+</div>
+
+</article>
+
+`
+).join("");
+
+}
+
+async function openSubject(index){
+
+currentSubject=subjects[index];
+
+showPage("subjectPage");
+
+document.getElementById(
+"pageCode"
+).textContent=
+getCode(currentSubject.name);
+
+document.getElementById(
+"pageSubjectName"
+).textContent=
+getName(currentSubject.name);
+
+const container=
+document.getElementById("weeks");
+
+container.innerHTML=`
+<div class="loading">
+<div class="loader"></div>
+جاري تحميل الأسابيع
+</div>
 `;
-
-card.addEventListener("click",()=>openWeek(week));
-
-weeksGrid.appendChild(card);
-
-});
-
-}
-
-async function openWeek(week){
-
-state.currentWeek=week;
-state.level="summary";
-
-weeksSection.classList.add("hidden");
-summarySection.classList.remove("hidden");
-
-pageTitle.textContent=week.name;
-pageSubtitle.textContent=state.currentSubject.name;
-
-backButton.style.display="flex";
-
-gallery.innerHTML="";
-$("galleryEmpty").classList.add("hidden");
-
-await loadInfo(week);
-
-loadImages(week);
-
-}
-
-async function loadInfo(week){
-
-const path="summaries/"+encodePath(week.path)+"/info.json";
 
 try{
 
-const response=await fetch(path,{cache:"no-cache"});
+const weeks=
+Array.isArray(currentSubject.weeks)
+?currentSubject.weeks
+:[];
 
-if(!response.ok){
-throw new Error("info.json not found");
+currentSubject.weeks=
+[...weeks].sort((a,b)=>{
+
+const na=parseInt(
+String(a.name||"").match(/\d+/)?.[0]||999
+);
+
+const nb=parseInt(
+String(b.name||"").match(/\d+/)?.[0]||999
+);
+
+return na-nb;
+
+});
+
+if(!currentSubject.weeks.length){
+
+container.innerHTML=`
+<div class="error-box empty">
+<strong>لا توجد ملخصات</strong>
+لم تتم إضافة أي أسبوع لهذه المادة حتى الآن.
+</div>
+`;
+
+return;
+
 }
 
-const info=await response.json();
+container.innerHTML=
+currentSubject.weeks.map(
+(week,index)=>`
 
-const stars=Math.max(0,Math.min(5,Number(info.stars)||0));
+<article
+class="week-card"
+onclick="openWeek(${index})">
 
-let starsHtml="";
+<div class="week-label">
+Week
+</div>
 
-for(let i=1;i<=5;i++){
+<div class="week-title">
+${escapeHTML(week.name)}
+</div>
 
-starsHtml+=`
-<span class="star ${i<=stars?"active":""}">
+<div class="week-open">
+
+عرض الملخص
+
 <svg viewBox="0 0 24 24">
-<path d="M12 3.5l2.63 5.33 5.87.85-4.25 4.14 1 5.85L12 16.91l-5.25 2.76 1-5.85L2.5 9.68l5.87-.85z"/>
+<path d="M5 12h14"></path>
+<path d="M13 6l6 6-6 6"></path>
 </svg>
-</span>
-`;
-
-}
-
-$("summaryHead").innerHTML=`
-<h2>${escapeHtml(week.name)}</h2>
-
-<div class="summary-meta">
-
-<div class="doctor">
-بواسطة <strong>${escapeHtml(info.drname||"غير محدد")}</strong>
-</div>
-
-<div class="stars">
-${starsHtml}
-</div>
-
-<div class="date">
-${escapeHtml(info.date||"")}
-${info.time?" — "+escapeHtml(info.time):""}
-</div>
 
 </div>
-`;
+
+</article>
+
+`
+).join("");
 
 }catch(error){
 
 console.error(error);
 
-$("summaryHead").innerHTML=`
-<h2>${escapeHtml(week.name)}</h2>
-<div class="summary-meta">
-<div class="doctor">
-بواسطة <strong>غير محدد</strong>
-</div>
+container.innerHTML=`
+<div class="error-box empty">
+<strong>تعذر تحميل الأسابيع</strong>
+حدث خطأ أثناء قراءة بيانات المادة.
 </div>
 `;
 
@@ -864,66 +1450,405 @@ $("summaryHead").innerHTML=`
 
 }
 
-function loadImages(week){
+async function openWeek(index){
 
-gallery.innerHTML="";
-state.images=[];
+currentWeek=
+currentSubject.weeks[index];
 
-const base="summaries/"+encodePath(week.path)+"/";
+showPage("summaryPage");
 
-let found=0;
-let checked=0;
-const total=100;
+const container=
+document.getElementById("summaryContainer");
 
-for(let i=1;i<=total;i++){
-
-const number=String(i).padStart(2,"0");
-const url=base+number+".jpg";
-
-const image=new Image();
-
-image.onload=()=>{
-
-found++;
-
-state.images.push(url);
-
-const index=state.images.length-1;
-
-const card=document.createElement("div");
-
-card.className="image-card";
-
-card.innerHTML=`
-<img src="${url}" alt="${escapeHtml(week.name)} ${number}">
+container.innerHTML=`
+<div class="loading">
+<div class="loader"></div>
+جاري تحميل الملخص
+</div>
 `;
 
-card.addEventListener("click",()=>openLightbox(index));
+try{
 
-gallery.appendChild(card);
+const weekPath=
+"summaries/"+
+encodePath(currentSubject.name)+
+"/"+
+encodePath(currentWeek.name);
 
-checked++;
+let info={
+stars:0,
+drname:"",
+date:"",
+time:""
+};
 
-finishImages();
+try{
+
+const infoResponse=
+await fetch(
+weekPath+"/info.json",
+{
+cache:"no-cache"
+}
+);
+
+if(infoResponse.ok){
+
+const infoData=
+await infoResponse.json();
+
+if(
+infoData &&
+typeof infoData==="object"
+){
+
+info={
+...info,
+...infoData
+};
+
+}
+
+}
+
+}catch(error){
+
+console.warn(
+"info.json error:",
+error
+);
+
+}
+
+const imageFiles=
+await findImages(weekPath);
+
+renderSummary(
+imageFiles,
+info
+);
+
+}catch(error){
+
+console.error(error);
+
+container.innerHTML=`
+<div class="error-box">
+<strong>تعذر تحميل الملخص</strong>
+حدث خطأ أثناء تحميل ملفات هذا الأسبوع.
+</div>
+`;
+
+}
+
+}
+
+async function findImages(basePath){
+
+const found=[];
+
+const requests=[];
+
+for(let i=1;i<=100;i++){
+
+const number=
+String(i).padStart(2,"0");
+
+const url=
+basePath+
+"/"+
+number+
+".jpg";
+
+requests.push(
+new Promise(resolve=>{
+
+const image=
+new Image();
+
+image.onload=function(){
+
+resolve({
+url:url,
+number:i
+});
 
 };
 
-image.onerror=()=>{
+image.onerror=function(){
 
-checked++;
-finishImages();
+resolve(null);
 
 };
 
 image.src=url;
 
+})
+);
+
 }
 
-function finishImages(){
+const results=
+await Promise.all(requests);
 
-if(checked===total&&found===0){
+results.forEach(item=>{
 
-$("galleryEmpty").classList.remove("hidden");
+if(item){
+found.push(item);
+}
+
+});
+
+found.sort(
+(a,b)=>a.number-b.number
+);
+
+return found;
+
+}
+
+function starSVG(active){
+
+return`
+<svg
+class="star-svg ${active?"active":""}"
+viewBox="0 0 24 24">
+
+<path d="M12 2.8l2.85 5.77 6.37.93-4.61 4.49 1.09 6.34L12 17.34l-5.7 2.99 1.09-6.34-4.61-4.49 6.37-.93L12 2.8z">
+</path>
+
+</svg>
+`;
+
+}
+
+function renderSummary(images,info){
+
+currentImages=
+images.map(image=>image.url);
+
+const stars=
+Math.max(
+0,
+Math.min(
+5,
+Number(info.stars)||0
+)
+);
+
+const date=
+formatDate(
+info.date,
+info.time
+);
+
+const starsHTML=
+[1,2,3,4,5]
+.map(number=>
+starSVG(number<=stars)
+)
+.join("");
+
+const container=
+document.getElementById(
+"summaryContainer"
+);
+
+container.innerHTML=`
+
+<article class="summary-card">
+
+<div class="summary-info">
+
+<div class="summary-main">
+
+<div>
+
+<div class="summary-label">
+Summary
+</div>
+
+<div class="summary-title">
+${escapeHTML(currentWeek.name)}
+</div>
+
+<div class="summary-meta">
+
+${
+info.drname
+?
+`
+<div class="meta">
+
+<svg viewBox="0 0 24 24">
+<circle cx="12" cy="8" r="3"></circle>
+<path d="M5 21c.8-4 3.1-6 7-6s6.2 2 7 6"></path>
+</svg>
+
+<span>الدكتور</span>
+
+<strong>
+${escapeHTML(info.drname)}
+</strong>
+
+</div>
+`
+:""
+}
+
+${
+date
+?
+`
+<div class="meta">
+
+<svg viewBox="0 0 24 24">
+<rect
+x="3"
+y="4"
+width="18"
+height="17"
+rx="2">
+</rect>
+
+<path d="M8 2v4M16 2v4M3 9h18">
+</path>
+
+</svg>
+
+<span>النشر</span>
+
+<strong>
+${escapeHTML(date)}
+</strong>
+
+</div>
+`
+:""
+}
+
+<div class="meta">
+
+<svg viewBox="0 0 24 24">
+<rect
+x="4"
+y="4"
+width="16"
+height="16"
+rx="2">
+</rect>
+
+<path d="M8 9h8M8 13h8M8 17h5">
+</path>
+
+</svg>
+
+<span>الصور</span>
+
+<strong>
+${images.length}
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="rating">
+
+<div class="rating-label">
+Rating
+</div>
+
+<div class="stars">
+${starsHTML}
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="gallery">
+
+${
+images.length
+?
+images.map(
+(image,index)=>`
+
+<div class="image-card">
+
+<img
+src="${image.url}"
+loading="lazy"
+alt="NUV Summary ${index+1}"
+onclick="openLightbox(${index})">
+
+<div class="image-overlay">
+فتح الصورة
+</div>
+
+</div>
+
+`
+).join("")
+:
+`
+<div class="error-box empty">
+<strong>لا توجد صور</strong>
+لم يتم العثور على صور داخل هذا الأسبوع.
+</div>
+`
+}
+
+</div>
+
+</article>
+`;
+
+}
+
+function formatDate(date,time){
+
+if(!date){
+return"";
+}
+
+try{
+
+const value=
+new Date(
+`${date}T${time||"00:00"}`
+);
+
+if(isNaN(value.getTime())){
+return date;
+}
+
+const options={
+year:"numeric",
+month:"long",
+day:"numeric"
+};
+
+if(time){
+
+options.hour="2-digit";
+options.minute="2-digit";
+
+}
+
+return value.toLocaleString(
+"ar-EG",
+options
+);
+
+}catch(error){
+
+return date;
 
 }
 
@@ -931,71 +1856,145 @@ $("galleryEmpty").classList.remove("hidden");
 
 function openLightbox(index){
 
-if(!state.images.length)return;
+if(!currentImages.length){
+return;
+}
 
-state.imageIndex=index;
+currentImageIndex=index;
 
-lbImage.src=state.images[index];
+updateLightbox();
 
-lightbox.classList.add("active");
+document
+.getElementById("lightbox")
+.classList.add("active");
+
+document.body.style.overflow="hidden";
+
+}
+
+function updateLightbox(){
+
+document.getElementById(
+"lightboxImage"
+).src=
+currentImages[currentImageIndex];
+
+document.getElementById(
+"lightboxCounter"
+).textContent=
+`${currentImageIndex+1} / ${currentImages.length}`;
 
 }
 
 function closeLightbox(){
 
-lightbox.classList.remove("active");
+document
+.getElementById("lightbox")
+.classList.remove("active");
+
+document.body.style.overflow="";
 
 }
 
 function nextImage(){
 
-if(!state.images.length)return;
-
-state.imageIndex=
-(state.imageIndex+1)%state.images.length;
-
-lbImage.src=state.images[state.imageIndex];
-
-}
-
-function prevImage(){
-
-if(!state.images.length)return;
-
-state.imageIndex=
-(state.imageIndex-1+state.images.length)%
-state.images.length;
-
-lbImage.src=state.images[state.imageIndex];
-
-}
-
-function goBack(){
-
-if(state.level==="summary"){
-
-openSubject(state.currentSubject);
+if(!currentImages.length){
 return;
+}
+
+currentImageIndex=
+(
+currentImageIndex+1
+)%
+currentImages.length;
+
+updateLightbox();
 
 }
 
-if(state.level==="weeks"){
+function previousImage(){
 
-state.level="subjects";
-state.currentSubject=null;
+if(!currentImages.length){
+return;
+}
 
-weeksSection.classList.add("hidden");
-summarySection.classList.add("hidden");
-subjectsSection.classList.remove("hidden");
+currentImageIndex=
+(
+currentImageIndex-1+
+currentImages.length
+)%
+currentImages.length;
 
-backButton.style.display="none";
+updateLightbox();
 
-pageTitle.textContent="المواد الدراسية";
-pageSubtitle.textContent="اختر المادة لعرض الأسابيع والملخصات";
+}
 
-searchInput.value="";
+function downloadCurrentImage(){
 
-renderSubjects();
+if(!currentImages.length){
+return;
+}
+
+const url=
+currentImages[currentImageIndex];
+
+const link=
+document.createElement("a");
+
+link.href=url;
+link.target="_blank";
+link.rel="noopener";
+link.download="NUV-Summary";
+
+document.body.appendChild(link);
+
+link.click();
+
+link.remove();
+
+}
+
+function showPage(id){
+
+document
+.querySelectorAll(".page")
+.forEach(
+page=>
+page.classList.remove("active")
+);
+
+document
+.getElementById(id)
+.classList.add("active");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+function goHome(){
+
+currentSubject=null;
+currentWeek=null;
+
+showPage("homePage");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+function goSubject(){
+
+if(currentSubject){
+
+currentWeek=null;
+
+showPage("subjectPage");
 
 }
 
@@ -1005,12 +2004,15 @@ function encodePath(path){
 
 return String(path)
 .split("/")
-.map(part=>encodeURIComponent(part))
+.map(
+part=>
+encodeURIComponent(part)
+)
 .join("/");
 
 }
 
-function escapeHtml(value){
+function escapeHTML(value){
 
 return String(value??"")
 .replace(/&/g,"&amp;")
@@ -1020,6 +2022,115 @@ return String(value??"")
 .replace(/'/g,"&#039;");
 
 }
+
+document
+.getElementById("searchInput")
+.addEventListener(
+"input",
+function(){
+
+const query=
+this.value.trim().toLowerCase();
+
+const filtered=
+subjects.filter(subject=>
+String(subject.name||"")
+.toLowerCase()
+.includes(query)
+);
+
+renderSubjects(filtered);
+
+}
+);
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(
+!document
+.getElementById("lightbox")
+.classList.contains("active")
+){
+return;
+}
+
+if(event.key==="Escape"){
+closeLightbox();
+}
+
+if(event.key==="ArrowRight"){
+nextImage();
+}
+
+if(event.key==="ArrowLeft"){
+previousImage();
+}
+
+}
+);
+
+let touchStartX=0;
+
+document
+.getElementById("lightbox")
+.addEventListener(
+"touchstart",
+function(event){
+
+touchStartX=
+event.changedTouches[0].screenX;
+
+},
+{
+passive:true
+}
+);
+
+document
+.getElementById("lightbox")
+.addEventListener(
+"touchend",
+function(event){
+
+const touchEndX=
+event.changedTouches[0].screenX;
+
+const difference=
+touchStartX-touchEndX;
+
+if(Math.abs(difference)<50){
+return;
+}
+
+if(difference>0){
+nextImage();
+}else{
+previousImage();
+}
+
+},
+{
+passive:true
+}
+);
+
+document
+.getElementById("lightbox")
+.addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+closeLightbox();
+}
+
+}
+);
+
+init();
+
 </script>
 
 </body>
