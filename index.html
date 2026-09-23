@@ -4,1017 +4,389 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NUV Summaries | ملخصات كلية العلاج الطبيعي</title>
+<title>NUV Summaries | ملخصات جامعة وادي النيل</title>
 
-<meta name="description" content="NUV Summaries - منصة ملخصات كلية العلاج الطبيعي بجامعة وادي النيل، تصفح ملخصات المواد والأسابيع بسهولة.">
-<meta name="keywords" content="NUV Summaries, Nile Valley University, جامعة وادي النيل, علاج طبيعي, ملخصات علاج طبيعي, Anatomy, Physiology, Biochemistry, Histology">
-<meta name="author" content="NUV Summaries">
+<meta name="description" content="NUV Summaries - منصة ملخصات ومحاضرات جامعة وادي النيل">
 <meta name="robots" content="index, follow">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="NUV Summaries | ملخصات كلية العلاج الطبيعي">
-<meta property="og:description" content="تصفح ملخصات كلية العلاج الطبيعي بجامعة وادي النيل حسب المادة والأسبوع.">
-<meta property="og:image" content="https://i.ibb.co/R42YfR8d/1789148364355.png">
-<meta property="og:site_name" content="NUV Summaries">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NUV Summaries">
-<meta name="twitter:description" content="ملخصات كلية العلاج الطبيعي بجامعة وادي النيل">
-<meta name="twitter:image" content="https://i.ibb.co/R42YfR8d/1789148364355.png">
-
-<link rel="icon" type="image/png" href="https://i.ibb.co/R42YfR8d/1789148364355.png">
-
+<link rel="icon" href="https://i.ibb.co/R42YfR8d/1789148364355.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-:root{
---black:#050505;
---black2:#090909;
---black3:#101010;
---card:#111111;
---card2:#151515;
---gold:#d4af37;
---gold2:#f1d477;
---gold3:#a9851f;
---white:#f7f5ef;
---gray:#aaa69b;
---border:rgba(212,175,55,.16);
---border2:rgba(255,255,255,.07);
---shadow:0 25px 80px rgba(0,0,0,.55);
-}
-
-html{
-scroll-behavior:smooth;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-background:
-radial-gradient(circle at 50% -15%,rgba(212,175,55,.13),transparent 34%),
-radial-gradient(circle at 0% 50%,rgba(212,175,55,.035),transparent 28%),
-var(--black);
-color:var(--white);
-font-family:"Cairo",sans-serif;
-min-height:100vh;
-overflow-x:hidden;
-}
-
-body:before{
-content:"";
-position:fixed;
-inset:0;
-pointer-events:none;
-background-image:
-linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
-linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
-background-size:45px 45px;
-mask-image:linear-gradient(to bottom,black,transparent 75%);
-}
-
-button,
-input{
-font-family:inherit;
-}
-
-button{
-cursor:pointer;
+    background:#050505;
+    color:#fff;
+    font-family:Cairo,Manrope,sans-serif;
+    min-height:100vh;
 }
 
 a{
-color:inherit;
-text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 .header{
-position:sticky;
-top:0;
-z-index:100;
-height:78px;
-background:rgba(5,5,5,.82);
-border-bottom:1px solid rgba(212,175,55,.12);
-backdrop-filter:blur(20px);
--webkit-backdrop-filter:blur(20px);
+    width:100%;
+    border-bottom:1px solid rgba(212,175,55,.15);
+    background:#080808;
 }
 
-.nav{
-height:100%;
-max-width:1280px;
-margin:auto;
-padding:0 22px;
-display:flex;
-align-items:center;
-justify-content:space-between;
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.brand{
-display:flex;
-align-items:center;
-gap:13px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.brand-logo{
-width:46px;
-height:46px;
-border-radius:13px;
-object-fit:cover;
-border:1px solid rgba(212,175,55,.28);
-box-shadow:0 8px 25px rgba(0,0,0,.4);
+.logo img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
 }
 
-.brand-info{
-display:flex;
-flex-direction:column;
-line-height:1.25;
+.logo-text{
+    font-size:21px;
+    font-weight:800;
 }
 
-.brand-name{
-font-family:"Manrope",sans-serif;
-font-size:18px;
-font-weight:800;
-letter-spacing:.2px;
-}
-
-.brand-sub{
-font-size:10px;
-font-weight:500;
-color:var(--gray);
-margin-top:3px;
-}
-
-.nav-line{
-width:70px;
-height:1px;
-background:linear-gradient(90deg,transparent,var(--gold));
+.logo-text span{
+    color:#d4af37;
 }
 
 .hero{
-max-width:1100px;
-margin:auto;
-padding:86px 22px 52px;
-text-align:center;
-}
-
-.hero-logo{
-width:105px;
-height:105px;
-object-fit:cover;
-border-radius:29px;
-border:1px solid rgba(212,175,55,.3);
-box-shadow:
-0 25px 70px rgba(0,0,0,.55),
-0 0 55px rgba(212,175,55,.08);
-margin-bottom:28px;
-}
-
-.hero-kicker{
-font-family:"Manrope",sans-serif;
-font-size:11px;
-font-weight:800;
-letter-spacing:4px;
-color:var(--gold);
-text-transform:uppercase;
-margin-bottom:15px;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px 35px;
+    text-align:center;
 }
 
 .hero h1{
-font-family:"Manrope","Cairo",sans-serif;
-font-size:clamp(38px,7vw,72px);
-font-weight:900;
-line-height:1;
-letter-spacing:-2.8px;
+    font-size:clamp(32px,6vw,58px);
+    font-weight:800;
+    line-height:1.2;
 }
 
 .hero h1 span{
-background:linear-gradient(120deg,var(--gold3),var(--gold2),var(--gold));
--webkit-background-clip:text;
-background-clip:text;
--webkit-text-fill-color:transparent;
+    color:#d4af37;
 }
 
-.hero-description{
-max-width:680px;
-margin:23px auto 0;
-font-size:15px;
-line-height:2;
-color:var(--gray);
+.hero p{
+    color:#aaa;
+    margin-top:15px;
+    font-size:16px;
 }
 
-.search-wrap{
-max-width:650px;
-margin:34px auto 0;
-position:relative;
+.search-box{
+    max-width:650px;
+    margin:35px auto 0;
+    position:relative;
 }
 
-.search-icon{
-position:absolute;
-right:19px;
-top:50%;
-transform:translateY(-50%);
-width:19px;
-height:19px;
-fill:none;
-stroke:var(--gold);
-stroke-width:1.7;
-pointer-events:none;
+.search-box input{
+    width:100%;
+    height:58px;
+    border-radius:15px;
+    border:1px solid rgba(212,175,55,.25);
+    background:#0d0d0d;
+    color:#fff;
+    padding:0 20px;
+    outline:none;
+    font-family:inherit;
+    font-size:15px;
+    transition:.25s;
 }
 
-.search{
-width:100%;
-height:58px;
-padding:0 54px 0 20px;
-border-radius:17px;
-border:1px solid var(--border);
-background:rgba(255,255,255,.035);
-color:white;
-outline:none;
-font-size:13px;
-transition:.3s;
-}
-
-.search::placeholder{
-color:#77746d;
-}
-
-.search:focus{
-border-color:rgba(212,175,55,.5);
-background:rgba(212,175,55,.025);
-box-shadow:0 0 0 4px rgba(212,175,55,.055);
+.search-box input:focus{
+    border-color:#d4af37;
+    box-shadow:0 0 0 3px rgba(212,175,55,.08);
 }
 
 .container{
-max-width:1280px;
-margin:auto;
-padding:10px 22px 80px;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
 }
 
-.page{
-display:none;
-animation:pageIn .45s ease;
+.section-title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin:30px 0 20px;
 }
 
-.page.active{
-display:block;
+.section-title h2{
+    font-size:24px;
 }
 
-@keyframes pageIn{
-from{
-opacity:0;
-transform:translateY(12px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.section-title span{
+    color:#888;
+    font-size:14px;
 }
 
-.section-heading{
-display:flex;
-align-items:end;
-justify-content:space-between;
-gap:20px;
-margin:10px 0 24px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:18px;
 }
 
-.heading-left{
-display:flex;
-flex-direction:column;
-gap:4px;
+.card{
+    background:linear-gradient(145deg,#101010,#080808);
+    border:1px solid rgba(212,175,55,.16);
+    border-radius:18px;
+    padding:24px;
+    cursor:pointer;
+    transition:.25s;
 }
 
-.eyebrow{
-font-size:10px;
-font-weight:800;
-letter-spacing:2px;
-color:var(--gold);
-text-transform:uppercase;
-font-family:"Manrope",sans-serif;
+.card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(212,175,55,.55);
+    box-shadow:0 12px 35px rgba(0,0,0,.4);
 }
 
-.section-heading h2{
-font-size:25px;
-font-weight:800;
+.card-icon{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(212,175,55,.08);
+    border:1px solid rgba(212,175,55,.2);
+    margin-bottom:18px;
 }
 
-.counter{
-font-size:12px;
-color:var(--gray);
+.card-icon svg{
+    width:25px;
+    height:25px;
+    fill:none;
+    stroke:#d4af37;
+    stroke-width:1.8;
 }
 
-.subjects{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
-gap:17px;
+.card h3{
+    font-size:17px;
+    line-height:1.6;
 }
 
-.subject-card{
-position:relative;
-overflow:hidden;
-min-height:185px;
-padding:25px;
-border:1px solid var(--border2);
-border-radius:22px;
-background:
-linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008)),
-var(--card);
-cursor:pointer;
-transition:.35s cubic-bezier(.2,.8,.2,1);
+.card p{
+    color:#888;
+    font-size:13px;
+    margin-top:8px;
 }
 
-.subject-card:before{
-content:"";
-position:absolute;
-width:170px;
-height:170px;
-border-radius:50%;
-background:var(--gold);
-opacity:.045;
-left:-70px;
-bottom:-90px;
-filter:blur(8px);
-transition:.4s;
-}
-
-.subject-card:hover{
-transform:translateY(-7px);
-border-color:rgba(212,175,55,.34);
-box-shadow:var(--shadow);
-}
-
-.subject-card:hover:before{
-opacity:.1;
-transform:scale(1.3);
-}
-
-.subject-top{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-bottom:22px;
-}
-
-.subject-number{
-width:35px;
-height:35px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-border:1px solid rgba(212,175,55,.2);
-color:var(--gold2);
-font-family:"Manrope",sans-serif;
-font-size:11px;
-font-weight:800;
-}
-
-.subject-code{
-font-family:"Manrope",sans-serif;
-font-size:11px;
-font-weight:800;
-letter-spacing:.6px;
-color:var(--gold);
-direction:ltr;
-}
-
-.subject-name{
-font-size:17px;
-font-weight:800;
-line-height:1.7;
-max-width:235px;
-}
-
-.subject-footer{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-top:18px;
-color:#77746d;
-font-size:11px;
-}
-
-.arrow{
-width:17px;
-height:17px;
-fill:none;
-stroke:var(--gold);
-stroke-width:1.6;
-transition:.25s;
-}
-
-.subject-card:hover .arrow{
-transform:translateX(-4px);
-}
-
-.back-button{
-display:inline-flex;
-align-items:center;
-gap:9px;
-height:42px;
-padding:0 16px;
-margin-bottom:24px;
-border-radius:12px;
-border:1px solid var(--border2);
-background:rgba(255,255,255,.035);
-color:#ddd9cf;
-font-size:12px;
-transition:.25s;
-}
-
-.back-button:hover{
-border-color:rgba(212,175,55,.35);
-color:var(--gold2);
-}
-
-.back-icon{
-width:16px;
-height:16px;
-fill:none;
-stroke:currentColor;
-stroke-width:1.7;
-}
-
-.subject-header{
-padding:28px 30px;
-border:1px solid var(--border);
-border-radius:23px;
-background:
-linear-gradient(145deg,rgba(212,175,55,.055),transparent 50%),
-var(--card);
-margin-bottom:20px;
-}
-
-.subject-header-code{
-font-family:"Manrope",sans-serif;
-font-size:11px;
-font-weight:800;
-letter-spacing:1px;
-color:var(--gold);
-direction:ltr;
-}
-
-.subject-header h2{
-font-size:29px;
-font-weight:800;
-margin-top:7px;
+.back{
+    display:none;
+    align-items:center;
+    gap:8px;
+    margin:10px 0 20px;
+    color:#d4af37;
+    cursor:pointer;
+    font-size:14px;
 }
 
 .weeks{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
-gap:15px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:16px;
 }
 
 .week-card{
-position:relative;
-overflow:hidden;
-padding:22px;
-border-radius:18px;
-border:1px solid var(--border2);
-background:var(--card);
-cursor:pointer;
-transition:.3s;
+    background:#0c0c0c;
+    border:1px solid rgba(212,175,55,.15);
+    border-radius:16px;
+    padding:22px;
+    cursor:pointer;
+    transition:.25s;
 }
 
 .week-card:hover{
-transform:translateY(-4px);
-border-color:rgba(212,175,55,.35);
-box-shadow:0 15px 45px rgba(0,0,0,.3);
+    border-color:#d4af37;
+    transform:translateY(-3px);
 }
 
-.week-card:after{
-content:"";
-position:absolute;
-height:2px;
-left:22px;
-right:22px;
-bottom:0;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.45;
+.week-card h3{
+    font-size:17px;
 }
 
-.week-label{
-font-family:"Manrope",sans-serif;
-font-size:10px;
-letter-spacing:2px;
-font-weight:800;
-color:var(--gold);
-text-transform:uppercase;
+.week-card p{
+    color:#777;
+    font-size:13px;
+    margin-top:7px;
 }
 
-.week-title{
-font-size:20px;
-font-weight:800;
-margin-top:7px;
-}
-
-.week-open{
-display:flex;
-align-items:center;
-gap:7px;
-color:#77746d;
-font-size:11px;
-margin-top:14px;
-}
-
-.week-open svg{
-width:14px;
-height:14px;
-fill:none;
-stroke:var(--gold);
-stroke-width:1.7;
-}
-
-.summary-card{
-border-radius:24px;
-border:1px solid var(--border);
-background:var(--card);
-overflow:hidden;
-box-shadow:0 20px 70px rgba(0,0,0,.25);
+.summary-view{
+    display:none;
 }
 
 .summary-info{
-padding:27px 30px;
-border-bottom:1px solid var(--border2);
-background:
-linear-gradient(120deg,rgba(212,175,55,.045),transparent 55%);
+    background:#0c0c0c;
+    border:1px solid rgba(212,175,55,.15);
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
 }
 
-.summary-main{
-display:flex;
-align-items:flex-start;
-justify-content:space-between;
-gap:25px;
-}
-
-.summary-label{
-font-size:10px;
-font-family:"Manrope",sans-serif;
-letter-spacing:2px;
-font-weight:800;
-color:var(--gold);
-text-transform:uppercase;
-}
-
-.summary-title{
-font-size:26px;
-font-weight:800;
-margin-top:6px;
+.summary-info h2{
+    color:#d4af37;
+    margin-bottom:12px;
 }
 
 .summary-meta{
-display:flex;
-flex-wrap:wrap;
-gap:9px;
-margin-top:15px;
-}
-
-.meta{
-display:flex;
-align-items:center;
-gap:7px;
-height:34px;
-padding:0 11px;
-border:1px solid var(--border2);
-border-radius:9px;
-background:rgba(255,255,255,.025);
-color:#8c8981;
-font-size:11px;
-}
-
-.meta svg{
-width:14px;
-height:14px;
-fill:none;
-stroke:var(--gold);
-stroke-width:1.6;
-}
-
-.meta strong{
-color:#ddd9cf;
-font-weight:600;
-}
-
-.rating{
-display:flex;
-flex-direction:column;
-align-items:flex-end;
-gap:6px;
-}
-
-.rating-label{
-font-size:9px;
-color:#77746d;
-letter-spacing:1px;
-font-family:"Manrope",sans-serif;
-text-transform:uppercase;
-}
-
-.stars{
-display:flex;
-gap:4px;
-direction:ltr;
-}
-
-.star-svg{
-width:21px;
-height:21px;
-}
-
-.star-svg path{
-fill:#2c2923;
-stroke:#514a38;
-stroke-width:1;
-}
-
-.star-svg.active path{
-fill:var(--gold);
-stroke:var(--gold2);
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    color:#aaa;
+    font-size:13px;
 }
 
 .gallery{
-padding:20px;
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(205px,1fr));
-gap:13px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:15px;
 }
 
 .image-card{
-position:relative;
-overflow:hidden;
-aspect-ratio:3/4;
-border-radius:15px;
-background:#070707;
-border:1px solid rgba(255,255,255,.07);
+    background:#0b0b0b;
+    border:1px solid rgba(212,175,55,.14);
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
 }
 
 .image-card img{
-width:100%;
-height:100%;
-display:block;
-object-fit:cover;
-cursor:pointer;
-transition:.4s;
+    width:100%;
+    display:block;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    transition:.3s;
 }
 
 .image-card:hover img{
-transform:scale(1.035);
+    transform:scale(1.025);
 }
 
-.image-overlay{
-position:absolute;
-inset:auto 9px 9px;
-height:40px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-background:rgba(0,0,0,.78);
-backdrop-filter:blur(12px);
-border:1px solid rgba(212,175,55,.16);
-color:#ddd9cf;
-font-size:10px;
-opacity:0;
-transition:.25s;
-pointer-events:none;
+.loading,
+.empty,
+.error{
+    text-align:center;
+    padding:60px 20px;
+    color:#888;
 }
 
-.image-card:hover .image-overlay{
-opacity:1;
+.error{
+    color:#d4af37;
 }
 
-.loading{
-padding:75px 20px;
-text-align:center;
-color:#77746d;
-font-size:12px;
-}
-
-.loader{
-width:35px;
-height:35px;
-margin:0 auto 15px;
-border:2px solid rgba(212,175,55,.15);
-border-top-color:var(--gold);
-border-radius:50%;
-animation:spin .75s linear infinite;
-}
-
-@keyframes spin{
-to{
-transform:rotate(360deg);
-}
-}
-
-.error-box{
-padding:45px 20px;
-border-radius:18px;
-border:1px solid rgba(212,175,55,.12);
-background:rgba(212,175,55,.025);
-text-align:center;
-color:#a39e91;
-font-size:12px;
-}
-
-.error-box strong{
-display:block;
-color:var(--gold2);
-font-size:16px;
-margin-bottom:8px;
-}
-
-.empty{
-grid-column:1/-1;
+.hidden{
+    display:none!important;
 }
 
 .lightbox{
-position:fixed;
-inset:0;
-z-index:9999;
-display:none;
-align-items:center;
-justify-content:center;
-padding:30px;
-background:rgba(0,0,0,.96);
-backdrop-filter:blur(15px);
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    z-index:9999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
 }
 
 .lightbox.active{
-display:flex;
+    display:flex;
 }
 
-.lightbox-image{
-max-width:90vw;
-max-height:87vh;
-object-fit:contain;
-border-radius:10px;
-box-shadow:0 30px 100px rgba(0,0,0,.7);
-user-select:none;
+.lightbox img{
+    max-width:95vw;
+    max-height:90vh;
+    object-fit:contain;
 }
 
-.lightbox-button{
-position:fixed;
-width:46px;
-height:46px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:13px;
-border:1px solid rgba(212,175,55,.18);
-background:rgba(20,20,20,.85);
-color:#ddd9cf;
-transition:.2s;
-}
-
-.lightbox-button:hover{
-border-color:rgba(212,175,55,.5);
-color:var(--gold2);
-}
-
-.lightbox-button svg{
-width:20px;
-height:20px;
-fill:none;
-stroke:currentColor;
-stroke-width:1.6;
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:1px solid rgba(212,175,55,.35);
+    background:#101010;
+    color:#d4af37;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:22px;
 }
 
 .lightbox-close{
-top:20px;
-right:20px;
+    top:20px;
+    right:20px;
 }
 
 .lightbox-prev{
-left:20px;
-top:50%;
-transform:translateY(-50%);
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
 }
 
 .lightbox-next{
-right:20px;
-top:50%;
-transform:translateY(-50%);
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
 }
 
-.lightbox-download{
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-width:auto;
-padding:0 18px;
-gap:8px;
-font-family:"Cairo",sans-serif;
-font-size:11px;
+footer{
+    margin-top:80px;
+    padding:30px 20px;
+    text-align:center;
+    color:#666;
+    border-top:1px solid rgba(212,175,55,.1);
+    font-size:13px;
 }
 
-.lightbox-counter{
-position:fixed;
-top:27px;
-left:50%;
-transform:translateX(-50%);
-font-family:"Manrope",sans-serif;
-font-size:11px;
-color:#77746d;
-direction:ltr;
+footer span{
+    color:#d4af37;
 }
 
-.footer{
-max-width:1280px;
-margin:auto;
-padding:32px 22px 40px;
-border-top:1px solid rgba(255,255,255,.055);
-text-align:center;
-color:#5f5c55;
-font-size:10px;
-line-height:2;
-}
+@media(max-width:600px){
+    .hero{
+        padding-top:45px;
+    }
 
-.footer strong{
-font-family:"Manrope",sans-serif;
-color:#a39d8d;
-letter-spacing:.5px;
-}
+    .grid{
+        grid-template-columns:1fr;
+    }
 
-@media(max-width:700px){
+    .weeks{
+        grid-template-columns:1fr;
+    }
 
-.header{
-height:68px;
-}
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-.nav{
-padding:0 15px;
-}
-
-.brand-logo{
-width:40px;
-height:40px;
-border-radius:11px;
-}
-
-.brand-name{
-font-size:16px;
-}
-
-.nav-line{
-display:none;
-}
-
-.hero{
-padding:55px 16px 38px;
-}
-
-.hero-logo{
-width:82px;
-height:82px;
-border-radius:23px;
-margin-bottom:22px;
-}
-
-.hero-kicker{
-font-size:9px;
-letter-spacing:3px;
-}
-
-.hero h1{
-font-size:40px;
-letter-spacing:-1.8px;
-}
-
-.hero-description{
-font-size:13px;
-line-height:2;
-}
-
-.container{
-padding:5px 15px 60px;
-}
-
-.section-heading{
-align-items:flex-start;
-flex-direction:column;
-gap:5px;
-}
-
-.section-heading h2{
-font-size:22px;
-}
-
-.subjects{
-grid-template-columns:1fr;
-gap:12px;
-}
-
-.subject-card{
-min-height:155px;
-padding:21px;
-border-radius:18px;
-}
-
-.weeks{
-grid-template-columns:1fr 1fr;
-gap:10px;
-}
-
-.week-card{
-padding:17px;
-border-radius:15px;
-}
-
-.week-title{
-font-size:17px;
-}
-
-.subject-header{
-padding:22px;
-border-radius:18px;
-}
-
-.subject-header h2{
-font-size:23px;
-}
-
-.summary-info{
-padding:21px;
-}
-
-.summary-main{
-flex-direction:column;
-gap:16px;
-}
-
-.rating{
-align-items:flex-start;
-}
-
-.summary-title{
-font-size:22px;
-}
-
-.gallery{
-grid-template-columns:repeat(2,1fr);
-padding:9px;
-gap:8px;
-}
-
-.image-overlay{
-opacity:1;
-height:34px;
-font-size:9px;
-}
-
-.lightbox{
-padding:8px;
-}
-
-.lightbox-image{
-max-width:96vw;
-max-height:82vh;
-}
-
-.lightbox-button{
-width:40px;
-height:40px;
-border-radius:11px;
-}
-
-.lightbox-prev{
-left:8px;
-}
-
-.lightbox-next{
-right:8px;
-}
-
-.lightbox-close{
-top:10px;
-right:10px;
-}
-
-.lightbox-download{
-bottom:12px;
-}
-
-}
-
-@media(max-width:390px){
-
-.weeks{
-grid-template-columns:1fr;
-}
-
-.gallery{
-grid-template-columns:repeat(2,1fr);
-}
-
-.hero h1{
-font-size:35px;
-}
-
+    .header-inner{
+        padding:15px;
+    }
 }
 </style>
 </head>
@@ -1022,888 +394,509 @@ font-size:35px;
 <body>
 
 <header class="header">
-<div class="nav">
-
-<a href="#" class="brand" onclick="goHome();return false;">
-
-<img class="brand-logo" src="https://i.ibb.co/R42YfR8d/1789148364355.png">
-
-<div class="brand-info">
-<div class="brand-name">NUV Summaries</div>
-<div class="brand-sub">Nile Valley University</div>
-</div>
-
-</a>
-
-<div class="nav-line"></div>
-
-</div>
+    <div class="header-inner">
+        <div class="logo">
+            <img src="https://i.ibb.co/R42YfR8d/1789148364355.png" alt="NUV">
+            <div class="logo-text">NUV <span>Summaries</span></div>
+        </div>
+    </div>
 </header>
 
-<section class="hero" id="hero">
+<section class="hero">
+    <h1>NUV <span>Summaries</span></h1>
+    <p>ملخصات ومحاضرات جامعة وادي النيل</p>
 
-<img class="hero-logo" src="https://i.ibb.co/R42YfR8d/1789148364355.png">
-
-<div class="hero-kicker">Faculty Of Physical Therapy</div>
-
-<h1>
-NUV <span>Summaries</span>
-</h1>
-
-<p class="hero-description">
-منصة ملخصات كلية العلاج الطبيعي بجامعة وادي النيل.
-تصفح المواد والأسابيع والوصول إلى الملخصات بسهولة من مكان واحد.
-Made by Dr. Omar Mustafa
-</p>
-
-<div class="search-wrap">
-
-<svg class="search-icon" viewBox="0 0 24 24">
-<circle cx="11" cy="11" r="7"></circle>
-<path d="M20 20l-4-4"></path>
-</svg>
-
-<input
-class="search"
-id="searchInput"
-type="search"
-placeholder="ابحث عن المادة..."
-autocomplete="off">
-
-</div>
-
+    <div class="search-box">
+        <input id="searchInput" type="search" placeholder="ابحث عن المادة...">
+    </div>
 </section>
 
 <main class="container">
 
-<section id="homePage" class="page active">
+    <div id="backButton" class="back">
+        <span>←</span>
+        <span>العودة للمواد</span>
+    </div>
 
-<div class="section-heading">
+    <div id="subjectsView">
+        <div class="section-title">
+            <h2>المواد الدراسية</h2>
+            <span id="subjectCount"></span>
+        </div>
 
-<div class="heading-left">
-<div class="eyebrow">Academic Library</div>
-<h2>المواد الدراسية</h2>
-</div>
+        <div id="subjectsGrid" class="grid"></div>
 
-<div class="counter" id="subjectCounter">
-جاري التحميل
-</div>
+        <div id="subjectsLoading" class="loading">
+            جاري تحميل المواد...
+        </div>
 
-</div>
+        <div id="subjectsEmpty" class="empty hidden">
+            لا توجد مواد متاحة حاليًا.
+        </div>
+    </div>
 
-<div id="subjects" class="subjects">
+    <div id="weeksView" class="hidden">
 
-<div class="loading">
-<div class="loader"></div>
-جاري تحميل المواد
-</div>
+        <div class="section-title">
+            <h2 id="subjectTitle"></h2>
+            <span id="weekCount"></span>
+        </div>
 
-</div>
+        <div id="weeksGrid" class="weeks"></div>
 
-</section>
+        <div id="weeksEmpty" class="empty hidden">
+            لا توجد أسابيع متاحة لهذه المادة.
+        </div>
 
-<section id="subjectPage" class="page">
+    </div>
 
-<button class="back-button" onclick="goHome()">
+    <div id="summaryView" class="summary-view">
 
-<svg class="back-icon" viewBox="0 0 24 24">
-<path d="M19 12H5"></path>
-<path d="M12 19l-7-7 7-7"></path>
-</svg>
+        <div class="section-title">
+            <h2 id="weekTitle"></h2>
+        </div>
 
-العودة إلى المواد
+        <div id="summaryInfo" class="summary-info"></div>
 
-</button>
+        <div id="gallery" class="gallery"></div>
 
-<div class="subject-header">
+        <div id="galleryEmpty" class="empty hidden">
+            لا توجد ملخصات في هذا الأسبوع.
+        </div>
 
-<div class="subject-header-code" id="pageCode"></div>
-
-<h2 id="pageSubjectName"></h2>
-
-</div>
-
-<div id="weeks" class="weeks"></div>
-
-</section>
-
-<section id="summaryPage" class="page">
-
-<button class="back-button" onclick="goSubject()">
-
-<svg class="back-icon" viewBox="0 0 24 24">
-<path d="M19 12H5"></path>
-<path d="M12 19l-7-7 7-7"></path>
-</svg>
-
-العودة إلى الأسابيع
-
-</button>
-
-<div id="summaryContainer"></div>
-
-</section>
+    </div>
 
 </main>
 
-<footer class="footer">
-<strong>NUV SUMMARIES</strong>
-<br>
-Made by Dr. Omar Mustafa
-<br>
-© 2026 NUV Summaries
+<footer>
+    Made by <span>Dr. Omar Mustafa</span>
 </footer>
 
-<div class="lightbox" id="lightbox">
+<div id="lightbox" class="lightbox">
 
-<div class="lightbox-counter" id="lightboxCounter"></div>
+    <button id="closeLightbox" class="lightbox-close">×</button>
+    <button id="prevImage" class="lightbox-prev">‹</button>
+    <button id="nextImage" class="lightbox-next">›</button>
 
-<button class="lightbox-button lightbox-close" onclick="closeLightbox()">
-
-<svg viewBox="0 0 24 24">
-<path d="M6 6l12 12"></path>
-<path d="M18 6L6 18"></path>
-</svg>
-
-</button>
-
-<button class="lightbox-button lightbox-prev" onclick="previousImage()">
-
-<svg viewBox="0 0 24 24">
-<path d="M15 5l-7 7 7 7"></path>
-</svg>
-
-</button>
-
-<img class="lightbox-image" id="lightboxImage">
-
-<button class="lightbox-button lightbox-next" onclick="nextImage()">
-
-<svg viewBox="0 0 24 24">
-<path d="M9 5l7 7-7 7"></path>
-</svg>
-
-</button>
-
-<button class="lightbox-button lightbox-download" onclick="downloadCurrentImage()">
-
-<svg viewBox="0 0 24 24">
-<path d="M12 3v12"></path>
-<path d="M7 10l5 5 5-5"></path>
-<path d="M5 21h14"></path>
-</svg>
-
-تحميل الصورة
-
-</button>
+    <img id="lightboxImage" src="" alt="Summary">
 
 </div>
 
 <script>
+"use strict";
 
-const GITHUB_USER=location.hostname.split(".")[0];
-const GITHUB_REPO=location.hostname;
-const GITHUB_BRANCH="main";
-const SUMMARIES_PATH=location.pathname.replace(/^\/|\/$/g,"");
+const state = {
+    subjects: [],
+    currentSubject: null,
+    currentWeek: null,
+    images: [],
+    currentImage: 0
+};
 
-let subjects=[];
-let currentSubject=null;
-let currentWeek=null;
-let currentImages=[];
-let currentImageIndex=0;
+const elements = {
+    search: document.getElementById("searchInput"),
+    subjectsView: document.getElementById("subjectsView"),
+    weeksView: document.getElementById("weeksView"),
+    summaryView: document.getElementById("summaryView"),
+    subjectsGrid: document.getElementById("subjectsGrid"),
+    weeksGrid: document.getElementById("weeksGrid"),
+    gallery: document.getElementById("gallery"),
+    subjectCount: document.getElementById("subjectCount"),
+    weekCount: document.getElementById("weekCount"),
+    subjectTitle: document.getElementById("subjectTitle"),
+    weekTitle: document.getElementById("weekTitle"),
+    summaryInfo: document.getElementById("summaryInfo"),
+    backButton: document.getElementById("backButton"),
+    subjectsLoading: document.getElementById("subjectsLoading"),
+    subjectsEmpty: document.getElementById("subjectsEmpty"),
+    weeksEmpty: document.getElementById("weeksEmpty"),
+    galleryEmpty: document.getElementById("galleryEmpty"),
+    lightbox: document.getElementById("lightbox"),
+    lightboxImage: document.getElementById("lightboxImage"),
+    closeLightbox: document.getElementById("closeLightbox"),
+    prevImage: document.getElementById("prevImage"),
+    nextImage: document.getElementById("nextImage")
+};
 
-const API_BASE=`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/`;
-
-async function getDirectory(path){
-
-const url=
-API_BASE+
-path.split("/").map(encodeURIComponent).join("/")+
-`?ref=${encodeURIComponent(GITHUB_BRANCH)}`;
-
-const response=await fetch(url);
-
-if(!response.ok){
-throw new Error(`GitHub API Error: ${response.status}`);
-}
-
-return await response.json();
-
-}
+document.addEventListener("DOMContentLoaded", init);
 
 async function init(){
+    try{
+        const response = await fetch("summaries/subjects.json", {
+            cache:"no-cache"
+        });
 
-try{
+        if(!response.ok){
+            throw new Error("subjects.json not found");
+        }
 
-const folders=await getDirectory(SUMMARIES_PATH);
+        const data = await response.json();
 
-subjects=folders
-.filter(item=>item.type==="dir")
-.map(item=>({
-name:item.name,
-path:item.path
-}));
+        if(!Array.isArray(data)){
+            throw new Error("Invalid subjects.json");
+        }
 
-subjects.sort((a,b)=>
-a.name.localeCompare(
-b.name,
-undefined,
-{numeric:true}
-));
+        state.subjects = data;
 
-renderSubjects(subjects);
+        elements.subjectsLoading.classList.add("hidden");
 
-}catch(error){
+        renderSubjects();
 
-console.error(error);
+    }catch(error){
 
-document.getElementById("subjects").innerHTML=`
-<div class="error-box empty">
-<strong>تعذر تحميل المواد</strong>
-تأكد من إعداد بيانات GitHub داخل الكود.
-</div>
-`;
+        console.error(error);
+
+        elements.subjectsLoading.classList.add("hidden");
+        elements.subjectsEmpty.classList.remove("hidden");
+
+        elements.subjectsEmpty.textContent =
+            "تعذر تحميل المواد. تأكد من وجود summaries/subjects.json";
+    }
+
+    setupEvents();
+}
+
+function setupEvents(){
+
+    elements.search.addEventListener("input", function(){
+        if(!state.currentSubject){
+            renderSubjects();
+        }
+    });
+
+    elements.backButton.addEventListener("click", function(){
+
+        if(state.summaryView.style.display === "block"){
+
+            openSubject(state.currentSubject);
+
+        }else if(!elements.weeksView.classList.contains("hidden")){
+
+            showSubjects();
+
+        }
+
+    });
+
+    elements.closeLightbox.addEventListener("click", closeLightbox);
+
+    elements.prevImage.addEventListener("click", previousImage);
+
+    elements.nextImage.addEventListener("click", nextImage);
+
+    document.addEventListener("keydown", function(event){
+
+        if(event.key === "Escape"){
+            closeLightbox();
+        }
+
+        if(event.key === "ArrowLeft"){
+            nextImage();
+        }
+
+        if(event.key === "ArrowRight"){
+            previousImage();
+        }
+
+    });
 
 }
 
-}
+function renderSubjects(){
 
-function getCode(name){
+    const search = elements.search.value.trim().toLowerCase();
 
-const match=name.match(/^([A-Z0-9]+)\s*-/);
+    const filtered = state.subjects.filter(subject =>
+        String(subject.name || "").toLowerCase().includes(search)
+    );
 
-return match?match[1]:"";
+    elements.subjectCount.textContent =
+        filtered.length + " مادة";
 
-}
+    elements.subjectsGrid.innerHTML = "";
 
-function getName(name){
+    if(!filtered.length){
 
-return name.replace(/^[A-Z0-9]+\s*-\s*/,"");
+        elements.subjectsEmpty.classList.remove("hidden");
+        return;
 
-}
+    }
 
-function renderSubjects(list){
+    elements.subjectsEmpty.classList.add("hidden");
 
-const container=document.getElementById("subjects");
+    filtered.forEach(subject => {
 
-document.getElementById("subjectCounter").textContent=
-`${list.length} مادة`;
+        const card = document.createElement("div");
 
-if(!list.length){
+        card.className = "card";
 
-container.innerHTML=`
-<div class="error-box empty">
-<strong>لا توجد نتائج</strong>
-لم يتم العثور على مادة مطابقة للبحث.
-</div>
-`;
+        card.innerHTML = `
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/>
+                    <path d="M4 5.5v16"/>
+                </svg>
+            </div>
+            <h3>${escapeHtml(subject.name)}</h3>
+            <p>${Array.isArray(subject.weeks) ? subject.weeks.length : 0} أسابيع</p>
+        `;
 
-return;
+        card.addEventListener("click", () => openSubject(subject));
 
-}
+        elements.subjectsGrid.appendChild(card);
 
-container.innerHTML=list.map((subject,index)=>`
-
-<article class="subject-card" onclick="openSubject(${subjects.indexOf(subject)})">
-
-<div class="subject-top">
-
-<div class="subject-number">
-${String(index+1).padStart(2,"0")}
-</div>
-
-<div class="subject-code">
-${escapeHTML(getCode(subject.name))}
-</div>
-
-</div>
-
-<div class="subject-name">
-${escapeHTML(getName(subject.name))}
-</div>
-
-<div class="subject-footer">
-
-<span>عرض الملخصات</span>
-
-<svg class="arrow" viewBox="0 0 24 24">
-<path d="M5 12h14"></path>
-<path d="M13 6l6 6-6 6"></path>
-</svg>
-
-</div>
-
-</article>
-
-`).join("");
+    });
 
 }
 
-async function openSubject(index){
+function openSubject(subject){
 
-currentSubject=subjects[index];
+    state.currentSubject = subject;
+    state.currentWeek = null;
 
-showPage("subjectPage");
+    elements.subjectsView.classList.add("hidden");
+    elements.summaryView.style.display = "none";
+    elements.weeksView.classList.remove("hidden");
+    elements.backButton.style.display = "flex";
 
-document.getElementById("pageCode").textContent=
-getCode(currentSubject.name);
+    elements.subjectTitle.textContent = subject.name;
 
-document.getElementById("pageSubjectName").textContent=
-getName(currentSubject.name);
+    const weeks = Array.isArray(subject.weeks)
+        ? subject.weeks
+        : [];
 
-const container=document.getElementById("weeks");
+    elements.weekCount.textContent =
+        weeks.length + " أسابيع";
 
-container.innerHTML=`
-<div class="loading">
-<div class="loader"></div>
-جاري تحميل الأسابيع
-</div>
-`;
+    elements.weeksGrid.innerHTML = "";
 
-try{
+    if(!weeks.length){
 
-const folders=await getDirectory(currentSubject.path);
+        elements.weeksEmpty.classList.remove("hidden");
+        return;
 
-const weeks=folders
-.filter(item=>item.type==="dir")
-.sort((a,b)=>{
+    }
 
-const na=parseInt(a.name.match(/\d+/)?.[0]||999);
-const nb=parseInt(b.name.match(/\d+/)?.[0]||999);
+    elements.weeksEmpty.classList.add("hidden");
 
-return na-nb;
+    weeks.forEach(week => {
 
-});
+        const card = document.createElement("div");
 
-currentSubject.weeks=weeks;
+        card.className = "week-card";
 
-if(!weeks.length){
+        card.innerHTML = `
+            <h3>${escapeHtml(week.name)}</h3>
+            <p>عرض ملخصات الأسبوع</p>
+        `;
 
-container.innerHTML=`
-<div class="error-box empty">
-<strong>لا توجد ملخصات</strong>
-لم تتم إضافة أي أسبوع لهذه المادة حتى الآن.
-</div>
-`;
+        card.addEventListener("click", () => openWeek(week));
 
-return;
+        elements.weeksGrid.appendChild(card);
+
+    });
 
 }
 
-container.innerHTML=weeks.map((week,index)=>`
+async function openWeek(week){
 
-<article class="week-card" onclick="openWeek(${index})">
+    state.currentWeek = week;
 
-<div class="week-label">Week</div>
+    elements.weeksView.classList.add("hidden");
+    elements.summaryView.style.display = "block";
 
-<div class="week-title">
-${escapeHTML(week.name)}
-</div>
+    elements.weekTitle.textContent = week.name;
 
-<div class="week-open">
+    elements.gallery.innerHTML = "";
 
-عرض الملخص
+    elements.summaryInfo.innerHTML = `
+        <h2>${escapeHtml(week.name)}</h2>
+        <div class="summary-meta">
+            <span>جاري تحميل البيانات...</span>
+        </div>
+    `;
 
-<svg viewBox="0 0 24 24">
-<path d="M5 12h14"></path>
-<path d="M13 6l6 6-6 6"></path>
-</svg>
+    try{
 
-</div>
+        const infoUrl =
+            "summaries/" +
+            encodePath(week.path) +
+            "/info.json";
 
-</article>
+        const response = await fetch(infoUrl, {
+            cache:"no-cache"
+        });
 
-`).join("");
+        if(response.ok){
 
-}catch(error){
+            const info = await response.json();
 
-console.error(error);
+            elements.summaryInfo.innerHTML = `
+                <h2>${escapeHtml(week.name)}</h2>
+                <div class="summary-meta">
+                    <span>الدكتور: ${escapeHtml(info.drname || "غير محدد")}</span>
+                    <span>التقييم: ${"★".repeat(Number(info.stars || 0))}</span>
+                    <span>${escapeHtml(info.date || "")}</span>
+                    <span>${escapeHtml(info.time || "")}</span>
+                </div>
+            `;
 
-container.innerHTML=`
-<div class="error-box empty">
-<strong>تعذر تحميل الأسابيع</strong>
-حدث خطأ أثناء الاتصال بالمستودع.
-</div>
-`;
+        }
 
+    }catch(error){
+
+        console.error(error);
+
+    }
+
+    renderImages(week);
 }
 
-}
+function renderImages(week){
 
-async function openWeek(index){
+    elements.gallery.innerHTML = "";
 
-currentWeek=currentSubject.weeks[index];
+    const imageFiles = [];
 
-showPage("summaryPage");
+    for(let i = 1; i <= 100; i++){
 
-const container=document.getElementById("summaryContainer");
+        const number = String(i).padStart(2, "0");
 
-container.innerHTML=`
-<div class="loading">
-<div class="loader"></div>
-جاري تحميل الملخص
-</div>
-`;
+        imageFiles.push(
+            "summaries/" +
+            encodePath(week.path) +
+            "/" +
+            number +
+            ".jpg"
+        );
 
-try{
+    }
 
-const files=await getDirectory(currentWeek.path);
+    state.images = imageFiles;
 
-const imageFiles=files
-.filter(file=>
-file.type==="file" &&
-/\.(jpg|jpeg|png|webp|gif)$/i.test(file.name)
-)
-.sort((a,b)=>
-a.name.localeCompare(
-b.name,
-undefined,
-{numeric:true}
-)
-);
+    let loaded = 0;
 
-let info={
-stars:0,
-drname:"",
-date:"",
-time:""
-};
+    imageFiles.forEach((url, index) => {
 
-const infoFile=files.find(file=>
-file.type==="file" &&
-file.name.toLowerCase()==="info.json"
-);
+        const img = new Image();
 
-if(infoFile){
+        img.onload = function(){
 
-try{
+            loaded++;
 
-const response=await fetch(infoFile.download_url);
+            const card = document.createElement("div");
 
-if(response.ok){
-info=await response.json();
-}
+            card.className = "image-card";
 
-}catch(error){
-console.warn(error);
-}
+            card.innerHTML = `
+                <img src="${url}" alt="${escapeHtml(week.name)} - ${String(index + 1).padStart(2,"0")}">
+            `;
 
-}
+            card.addEventListener("click", function(){
+                openLightbox(index);
+            });
 
-renderSummary(imageFiles,info);
+            elements.gallery.appendChild(card);
 
-}catch(error){
+        };
 
-console.error(error);
+        img.onerror = function(){
 
-container.innerHTML=`
-<div class="error-box">
-<strong>تعذر تحميل الملخص</strong>
-حدث خطأ أثناء تحميل الملفات.
-</div>
-`;
+            loaded++;
 
-}
+            if(
+                loaded === imageFiles.length &&
+                elements.gallery.children.length === 0
+            ){
+                elements.galleryEmpty.classList.remove("hidden");
+            }
 
-}
+        };
 
-function starSVG(active){
+        img.src = url;
 
-return`
-<svg class="star-svg ${active?"active":""}" viewBox="0 0 24 24">
-<path d="M12 2.8l2.85 5.77 6.37.93-4.61 4.49 1.09 6.34L12 17.34l-5.7 2.99 1.09-6.34-4.61-4.49 6.37-.93L12 2.8z"></path>
-</svg>
-`;
-
-}
-
-function renderSummary(images,info){
-
-currentImages=images.map(image=>image.download_url);
-
-const stars=Math.max(
-0,
-Math.min(
-5,
-Number(info.stars)||0
-)
-);
-
-const date=formatDate(info.date,info.time);
-
-const starsHTML=[1,2,3,4,5]
-.map(number=>starSVG(number<=stars))
-.join("");
-
-const container=document.getElementById("summaryContainer");
-
-container.innerHTML=`
-
-<article class="summary-card">
-
-<div class="summary-info">
-
-<div class="summary-main">
-
-<div>
-
-<div class="summary-label">
-Summary
-</div>
-
-<div class="summary-title">
-${escapeHTML(currentWeek.name)}
-</div>
-
-<div class="summary-meta">
-
-${
-info.drname
-?
-`
-<div class="meta">
-
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="8" r="3"></circle>
-<path d="M5 21c.8-4 3.1-6 7-6s6.2 2 7 6"></path>
-</svg>
-
-<span>الدكتور</span>
-<strong>${escapeHTML(info.drname)}</strong>
-
-</div>
-`
-:""
-}
-
-${
-date
-?
-`
-<div class="meta">
-
-<svg viewBox="0 0 24 24">
-<rect x="3" y="4" width="18" height="17" rx="2"></rect>
-<path d="M8 2v4M16 2v4M3 9h18"></path>
-</svg>
-
-<span>النشر</span>
-<strong>${escapeHTML(date)}</strong>
-
-</div>
-`
-:""
-}
-
-<div class="meta">
-
-<svg viewBox="0 0 24 24">
-<rect x="4" y="4" width="16" height="16" rx="2"></rect>
-<path d="M8 9h8M8 13h8M8 17h5"></path>
-</svg>
-
-<span>الصور</span>
-<strong>${images.length}</strong>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="rating">
-
-<div class="rating-label">
-Rating
-</div>
-
-<div class="stars">
-${starsHTML}
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="gallery">
-
-${
-images.length
-?
-images.map((image,index)=>`
-
-<div class="image-card">
-
-<img
-src="${image.download_url}"
-loading="lazy"
-alt="NUV Summary ${index+1}"
-onclick="openLightbox(${index})">
-
-<div class="image-overlay">
-فتح الصورة
-</div>
-
-</div>
-
-`).join("")
-:
-`
-<div class="error-box empty">
-<strong>لا توجد صور</strong>
-لم يتم العثور على صور داخل هذا الأسبوع.
-</div>
-`
-}
-
-</div>
-
-</article>
-`;
-
-}
-
-function formatDate(date,time){
-
-if(!date)return"";
-
-try{
-
-const value=new Date(
-`${date}T${time||"00:00"}`
-);
-
-if(isNaN(value.getTime()))return date;
-
-const options={
-year:"numeric",
-month:"long",
-day:"numeric"
-};
-
-if(time){
-options.hour="2-digit";
-options.minute="2-digit";
-}
-
-return value.toLocaleString(
-"ar-EG",
-options
-);
-
-}catch(error){
-
-return date;
-
-}
+    });
 
 }
 
 function openLightbox(index){
 
-if(!currentImages.length)return;
+    if(!state.images.length) return;
 
-currentImageIndex=index;
+    state.currentImage = index;
 
-updateLightbox();
+    elements.lightboxImage.src =
+        state.images[state.currentImage];
 
-document
-.getElementById("lightbox")
-.classList.add("active");
-
-document.body.style.overflow="hidden";
-
-}
-
-function updateLightbox(){
-
-document.getElementById("lightboxImage").src=
-currentImages[currentImageIndex];
-
-document.getElementById("lightboxCounter").textContent=
-`${currentImageIndex+1} / ${currentImages.length}`;
+    elements.lightbox.classList.add("active");
 
 }
 
 function closeLightbox(){
 
-document
-.getElementById("lightbox")
-.classList.remove("active");
-
-document.body.style.overflow="";
+    elements.lightbox.classList.remove("active");
 
 }
 
 function nextImage(){
 
-if(!currentImages.length)return;
+    if(!state.images.length) return;
 
-currentImageIndex=
-(currentImageIndex+1)%currentImages.length;
+    state.currentImage =
+        (state.currentImage + 1) % state.images.length;
 
-updateLightbox();
+    elements.lightboxImage.src =
+        state.images[state.currentImage];
 
 }
 
 function previousImage(){
 
-if(!currentImages.length)return;
+    if(!state.images.length) return;
 
-currentImageIndex=
-(currentImageIndex-1+currentImages.length)%currentImages.length;
+    state.currentImage =
+        (state.currentImage - 1 + state.images.length) %
+        state.images.length;
 
-updateLightbox();
-
-}
-
-function downloadCurrentImage(){
-
-if(!currentImages.length)return;
-
-const url=currentImages[currentImageIndex];
-
-const link=document.createElement("a");
-
-link.href=url;
-link.target="_blank";
-link.rel="noopener";
-link.download="NUV-Summary";
-
-document.body.appendChild(link);
-
-link.click();
-
-link.remove();
+    elements.lightboxImage.src =
+        state.images[state.currentImage];
 
 }
 
-function showPage(id){
+function showSubjects(){
 
-document
-.querySelectorAll(".page")
-.forEach(page=>page.classList.remove("active"));
+    state.currentSubject = null;
+    state.currentWeek = null;
 
-document
-.getElementById(id)
-.classList.add("active");
+    elements.summaryView.style.display = "none";
+    elements.weeksView.classList.add("hidden");
+    elements.subjectsView.classList.remove("hidden");
+    elements.backButton.style.display = "none";
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+    renderSubjects();
 
 }
 
-function goHome(){
+function encodePath(path){
 
-showPage("homePage");
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+    return path
+        .split("/")
+        .map(part => encodeURIComponent(part))
+        .join("/");
 
 }
 
-function goSubject(){
+function escapeHtml(value){
 
-if(currentSubject){
-showPage("subjectPage");
-}
-
-}
-
-document
-.getElementById("searchInput")
-.addEventListener("input",function(){
-
-const query=this.value.trim().toLowerCase();
-
-const filtered=subjects.filter(subject=>
-subject.name.toLowerCase().includes(query)
-);
-
-renderSubjects(filtered);
-
-});
-
-document.addEventListener("keydown",function(event){
-
-if(
-!document
-.getElementById("lightbox")
-.classList.contains("active")
-)return;
-
-if(event.key==="Escape"){
-closeLightbox();
-}
-
-if(event.key==="ArrowRight"){
-nextImage();
-}
-
-if(event.key==="ArrowLeft"){
-previousImage();
-}
-
-});
-
-let touchStartX=0;
-
-document
-.getElementById("lightbox")
-.addEventListener("touchstart",function(event){
-
-touchStartX=event.changedTouches[0].screenX;
-
-},{passive:true});
-
-document
-.getElementById("lightbox")
-.addEventListener("touchend",function(event){
-
-const touchEndX=event.changedTouches[0].screenX;
-
-const difference=touchStartX-touchEndX;
-
-if(Math.abs(difference)<50)return;
-
-if(difference>0){
-nextImage();
-}else{
-previousImage();
-}
-
-},{passive:true});
-
-document
-.getElementById("lightbox")
-.addEventListener("click",function(event){
-
-if(event.target===this){
-closeLightbox();
-}
-
-});
-
-function escapeHTML(value){
-
-return String(value??"")
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
 
 }
-
-init();
-
 </script>
 
 </body>
-</html>
+  </html>
