@@ -1201,10 +1201,10 @@ Made by Dr. Omar Mustafa
 
 <script>
 
-const GITHUB_USER="NUV-Summaries";
-const GITHUB_REPO="NUV-Summaries.github.io";
+const GITHUB_USER=location.hostname.split(".")[0];
+const GITHUB_REPO=location.hostname;
 const GITHUB_BRANCH="main";
-const SUMMARIES_PATH="/.com";
+const SUMMARIES_PATH=location.pathname.replace(/^\/|\/$/g,"");
 
 let subjects=[];
 let currentSubject=null;
