@@ -1,5 +1,23 @@
 [
   {
+    "name": "BASM103 - Biochemistry (1)",
+    "weeks": [
+      {
+        "name": "Week 1",
+        "path": "BASM103 - Biochemistry (1)/Week 1"
+      }
+    ]
+  },
+  {
+    "name": "BASG105 - Biophysics",
+    "weeks": [
+      {
+        "name": "Week 1",
+        "path": "BASG105 - Biophysics/Week 1"
+      }
+    ]
+  },
+  {
     "name": "BASM104 - Histology (1)",
     "weeks": [
       {
